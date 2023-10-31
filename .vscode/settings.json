@@ -1,0 +1,36 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "DO-NHAT-NAM",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "javaconect",
+            "group": "javagroup",
+            "database": "javahomework",
+            "username": "sa",
+            "password": "hatienphuvt321"
+        },
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "DO-NHAT-NAM\\DONHATNAM",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "jvconect2",
+            "group": "jvconect2",
+            "database": "javahomework",
+            "username": "sa",
+            "password": "1"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+:root {
+  --PrimaryColorDashboard: hsl(94, 59%, 35%);
+  --HoverCoverDashboard: #bdf094;
+  --paleGreenDashboard: hsl(96, 75%, 85%);
+  --whiteColorDashboard: hsl(0, 0%, 100%);
+  --blackColorDashboard: hsl(0, 0%, 18%);
+  --textColorDashboard: hsl(240, 1%, 48%);
+  --bgColorDashboard: hsl(220, 10%, 94%);
+  --greyTextDashboard: rgb(190, 190, 190);
+  --inputColorDashboard: hsl(330, 12%, 97%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FOntSIze: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.icon-dashboard {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+.btn-dashboard {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var();
+}
+.btn-dashboard .icon-dashboard {
+  margin-left: 0.5rem;
+}
+.btn-dashboard .icon-dashboard :hover {
+  background: var(--paleGreenDashboard);
+}
+
+.grid-dashboard {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.container-dashboard {
+  font-size: 90%;
+  position: relative;
+  margin: auto;
+  margin-top: 1rem;
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(220, 10%, 94%);
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 8px var(--greyTextDashboard);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=profileeditmain.css.map */

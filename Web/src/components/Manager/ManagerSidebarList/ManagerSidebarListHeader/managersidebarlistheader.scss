@@ -1,0 +1,241 @@
+:root {
+    --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+    --SecondaryColorManagerDashboard: hsl(218, 35%, 34%);
+    --WhiteTextColorMgDashboard: hsl(0, 0%, 100%);
+    --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+    --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+    --blackColorManagerDashboard: hsl(0, 0%, 18%);
+    --textColorManagerDashboard: hsl(0, 0%, 83%);
+    --bgColorManagerDashboard: hsl(218, 24%, 61%);
+    --greyTextManagerDashboard: rgb(144, 144, 144);
+    --inputColorManagerDashboard: hsl(240, 12%, 97%);
+
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+
+.sideBarMg {
+    background: var(--PrimaryColorManagerDashboard);
+    width: 18%;
+    height: 100%;
+    gap: .5rem;
+    padding-left: 1px;
+    overflow: auto;
+
+    .logoMgDiv {
+        padding: .5rem 1.5rem 0rem 0.5rem;
+        cursor: pointer;
+
+        // img{
+        //     max-width: 60px !important;
+        //     margin-right: .5rem;
+        //     background: none;
+        //     border-radius: 2px;
+        //     padding: .2rem;
+        // }
+
+        .iconMgdashboardLogo {
+            margin-right: .5rem;
+            margin-left: .5rem;
+            font-size: var(--biggestFontSize);
+            color: var(--WhiteTextColorMgDashboard);
+        }
+
+        h2 {
+            font-size: var(--h2FontSize);
+            color: var(--WhiteTextColorMgDashboard);
+        }
+    }
+
+    .menuDivMgDashboard,
+    .settingsDivMg {
+        .divMgTitle {
+            font-size: var(--h3FontSize);
+            color: var(--textColorManagerDashboard);
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .menuMgLists {
+            .MglistItem {
+                padding: .2rem 1.5rem;
+                width: 100%;
+                position: relative;
+
+
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 0%;
+                    left: 0;
+                    width: 5px;
+                    bottom: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background: var(--WhiteTextColorMgDashboard);
+                }
+
+                button {
+                    border: none;
+                    outline: none;
+                    background: none;
+                    cursor: pointer;
+
+                    .menuMgLink {
+                        color: var(--greyTextManagerDashboard);
+                        font-weight: 500;
+                        transition: 0;
+
+                        .icon-Mgdashboard {
+                            margin-right: .5rem;
+                        }
+                    }
+
+                    &:hover .menuMgLink {
+                        color: var(--WhiteTextColorMgDashboard);
+                        transition: 0;
+                    }
+                }
+
+                .menuMgLink {
+                    color: var(--greyTextManagerDashboard);
+                    font-weight: 500;
+                    transition: 0;
+
+                    .icon-Mgdashboard {
+                        margin-right: .5rem;
+                    }
+                }
+
+                &:hover .menuMgLink {
+                    color: var(--WhiteTextColorMgDashboard);
+                    transition: 0;
+                }
+
+
+
+                &:hover::before {
+                    height: 100%;
+                    transition: .3s ease;
+                }
+            }
+        }
+    }
+
+}
+
+//MEDIA QUERIES =======>
+@media screen and (max-width: 990px) {
+    .sideBarMg {
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sideBarMg {
+        .logoMgDiv {
+            padding-left: .5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .sideBarMg {
+        .logoMgDiv {
+            text-align: center;
+            margin: auto;
+            padding: 1.5rem .5rem 0;
+
+            img {
+                max-width: 50px !important;
+                margin: 0;
+                border-radius: 10px;
+                // padding: .5rem;
+            }
+
+            h2 {
+                display: none;
+            }
+        }
+
+        .menuDivMgDashboard,
+        .settingsDivMg {
+
+            .divMgTitle,
+            .smallText {
+                display: none;
+            }
+
+            .menuMgLists {
+                gap: 2.5rem;
+
+                .MglistItem {
+
+                    button {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+
+
+                        .menuMgLink {
+                            justify-content: center;
+
+                            .icon-Mgdashboard {
+                                font-size: var(--h1FontSize);
+                            }
+                        }
+                    }
+
+                    .menuMgLink {
+                        justify-content: center;
+
+                        .icon-Mgdashboard {
+                            font-size: var(--h1FontSize);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .sideBarMg {
+
+        .menuDivMgDashboard,
+        .settingsDivMg {
+            .menuMgLists {
+                .MglistItem {
+                    padding: .2rem .5rem;
+
+                    button {
+                        .menuMgLink {
+                            justify-content: center;
+
+                            .icon-Mgdashboard {
+                                font-size: var(--h2FontSize);
+                            }
+                        }
+                    }
+
+                    .menuMgLink {
+                        justify-content: center;
+
+                        .icon-Mgdashboard {
+                            font-size: var(--h2FontSize);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

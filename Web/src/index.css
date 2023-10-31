@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Color and styling */
+
+:root{
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 240);
+  --cardBG: rgb(225, 225, 225);
+  --PrimaryColorDashboard: hsl(94, 59%, 35%);
+    --HoverCoverDashboard: #bdf094;
+    --paleGreenDashboard: hsl(96, 75%, 85%);
+    --whiteColorDashboard: hsl(0, 0%, 100%);
+    --blackColorDashboard: hsl(0, 0%, 18%);
+    --textColorDashboard: hsl(240, 1%, 48%);
+    --bgColorDashboard: hsl(220, 10%, 94%);
+    --greyTextDashboard: rgb(190, 190, 190);
+    --inputColorDashboard: hsl(330, 12%, 97%);
+
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h2FontSize: 1.5rem;
+  --h3FOntSIze: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+.section{
+  padding: 4rem 0 2rem;
+}
+
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.grid{
+  display: grid;
+  align-items: center;
+}
+
+.btn{
+  padding: .6rem 1.5rem;
+  background: var(--gradientColor);
+  border-radius: 3rem;
+  border:none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.btn a{
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.btn:hover{
+  background: var(--SecondaryColor);
+}
+
+img,video{
+  width: 100%;
+  height: auto;
+}
+
+input{
+  font-size: 100%;
+}
+body{
+  background: var(--bodyColor);
+}
+
+.message{
+  display: none;
+}
+
+.showMessage{
+  display: block;
+  padding: 10px;
+  color: var(--whiteColor);
+  background: rgb(255,0,0);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.btn-dashboard .icon-dashboard{
+  margin-left: .5rem;
+}
+
+.btn-dashboard:hover{
+  background: var(--paleGreenDashboard);
+  color: var(--PrimaryColorDashboard);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1240px){
+  .container {
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+
+  .section{
+    padding: 6rem 0 4rem;
+  }
+}
+
+
+@media screen and (min-width:2560px) {
+  body{
+    zoom: 1.7;
+  }
+}

@@ -1,0 +1,335 @@
+:root {
+  --primaryColor: hsl(94, 55%, 56%);
+  --hoverColor: hsl(93, 75%, 76%);
+  --paleGreen: hsl(96, 75%, 89%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(0, 0%, 18%);
+  --TextColor: hsl(240, 4%, 36%);
+  --GreyText: hsl(0, 0%, 75%);
+  --InputColor: hsl(330, 12%, 97%);
+  --bgColor: hsl(113, 11%, 85%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FOntSIze: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.icon-register {
+  font-size: var(--h2FontSize);
+  color: var(--GreyText);
+}
+
+.btn-register {
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--GreyText);
+}
+
+.btn-register .icon {
+  margin-left: 0.5rem;
+}
+
+.btn-register:hover {
+  color: var(--primaryColor);
+  background: var(--paleGreen);
+}
+
+.registerPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+.registerPage .container-register {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+.registerPage .container-register .videoDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.registerPage .container-register .videoDiv video, .registerPage .container-register .videoDiv .footerDiv {
+  position: absolute;
+}
+.registerPage .container-register .videoDiv video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.registerPage .container-register .videoDiv .textDiv {
+  position: relative;
+}
+.registerPage .container-register .videoDiv .textDiv .title {
+  color: var(--WhiteColor);
+  font-size: 35px;
+  font-weight: 800;
+}
+.registerPage .container-register .videoDiv .textDiv p {
+  color: var(--WhiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+.registerPage .container-register .videoDiv .footerDiv {
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.248);
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
+.registerPage .container-register .videoDiv .footerDiv .text {
+  color: var(--WhiteColor);
+}
+.registerPage .container-register .videoDiv .footerDiv .btn-register {
+  background: var(--WhiteColor);
+  color: var(--primaryColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+.registerPage .container-register .videoDiv .footerDiv .btn-register:hover {
+  background: var(--hoverColor);
+  color: var(--BlackColor);
+}
+.registerPage .container-register .formDiv {
+  flex-basis: 50%;
+  margin: auto;
+  flex-direction: column;
+  gap: 0.1rem;
+  transform: translateY(-1rem);
+}
+.registerPage .container-register .formDiv .headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.registerPage .container-register .formDiv .headerDiv .icon-register {
+  font-size: 40px;
+  color: var(--primaryColor);
+}
+.registerPage .container-register .formDiv .headerDiv h3 {
+  font-size: 25px;
+  color: var(--BlackColor);
+  font-weight: 600;
+}
+.registerPage .container-register .formDiv .form {
+  gap: 0.2rem;
+  transform: translateY(-1.5rem);
+}
+.registerPage .container-register .formDiv .form .inputDiv .icon {
+  color: var(--GreyText);
+}
+.registerPage .container-register .formDiv .form .inputDiv input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 200px;
+}
+.registerPage .container-register .formDiv .form .inputDiv label {
+  color: var(--BlackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  display: block;
+}
+.registerPage .container-register .formDiv .form .inputDiv .input {
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--InputColor);
+  border-radius: 10px;
+}
+.registerPage .container-register .formDiv .form .btn-register {
+  padding: 0.8rem;
+  background: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--WhiteColor);
+  align-items: center;
+  margin-top: 0.8rem;
+  margin-bottom: 0.1rem;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+}
+.registerPage .container-register .formDiv .form .btn-register .icon-register {
+  font-size: 25px;
+  transition: 0.3s ease;
+  color: var(--WhiteColor);
+}
+.registerPage .container-register .formDiv .form .btn-register:hover {
+  background: var(--hoverColor);
+  color: var(--BlackColor);
+}
+.registerPage .container-register .formDiv .form .btn-register:hover .icon-register {
+  color: var(--BlackColor);
+  transform: translateX(5px);
+}
+.registerPage .container-register .formDiv .form .forgotPassword {
+  font-size: 13px;
+  color: var(--BlackColor);
+  opacity: 0.7;
+  text-align: center;
+}
+.registerPage .container-register .formDiv .form .forgotPassword a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .registerPage .container-register {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .registerPage .container-register .videoDiv {
+    width: 100%;
+  }
+  .registerPage .container-register .videoDiv .textDiv .title {
+    font-size: 20px;
+    transform: translateY(-1.4rem) !important;
+  }
+  .registerPage .container-register .videoDiv .textDiv p {
+    padding: 1rem;
+    transform: translateY(-1.4rem) !important;
+  }
+  .registerPage .container-register .videoDiv .footerDiv .text {
+    font-size: 12px !important;
+  }
+  .registerPage .container-register .videoDiv .footerDiv .btn-register {
+    padding: 0.4rem 0.5rem;
+  }
+  .registerPage .container-register .formDiv {
+    gap: 1rem;
+    transform: translateY(1.2rem);
+  }
+  .registerPage .container-register .formDiv .headerDiv {
+    padding: 0.1rem 0 !important;
+  }
+  .registerPage .container-register .formDiv .headerDiv img {
+    padding-bottom: 0;
+    width: 40px;
+  }
+  .registerPage .container-register .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .registerPage .container-register .formDiv .form {
+    gap: 0.3rem;
+    transform: translateY(-1.2rem);
+  }
+  .registerPage .container-register .formDiv .form .inputDiv input {
+    width: 100%;
+  }
+  .registerPage .container-register .formDiv .form .btn-register {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (max-width: 331px) {
+  .registerPage .container-register .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 352px) {
+  .registerPage .container-register {
+    padding: 0.1rem;
+  }
+}
+@media screen and (max-width: 616px) {
+  .registerPage .container-register .videoDiv .textDiv .title {
+    font-size: 18px;
+  }
+  .registerPage .container-register .videoDiv .textDiv p {
+    font-size: 12px;
+    transform: translateY(-1.6rem) !important;
+    padding: 0.5rem !important;
+  }
+  .registerPage .container-register .videoDiv .footerDiv {
+    height: 30% !important;
+  }
+  .registerPage .container-register .videoDiv .footerDiv .btn-register {
+    padding: 0.5rem 0.7rem !important;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 775px) {
+  .registerPage .container-register .videoDiv .textDiv .title {
+    font-size: 25px;
+    transform: translateY(-1.2rem);
+  }
+  .registerPage .container-register .videoDiv .textDiv p {
+    padding: 1rem;
+    transform: translateY(-1.2rem);
+  }
+  .registerPage .container-register .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .registerPage .container-register .videoDiv .footerDiv .btn-register {
+    padding: 0.8rem 1.5rem;
+  }
+  .registerPage .container-register .formDiv .headerDiv {
+    padding: 1.5rem 0;
+  }
+  .registerPage .container-register .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .registerPage .container-register .formDiv .form .inputDiv input {
+    width: 100%;
+    max-width: 200px;
+  }
+  .registerPage .container-register .formDiv .form .btn-register {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (max-width: 927px) {
+  .registerPage .container-register {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .registerPage .container-register .videoDiv .footerDiv .text {
+    font-size: 13px;
+  }
+  .registerPage .container-register .videoDiv .footerDiv .btn-register {
+    padding: 0.8rem 1.1rem;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .registerPage .container-register .formDiv .headerDiv h3 {
+    font-size: 21px;
+  }
+}/*# sourceMappingURL=register.css.map */

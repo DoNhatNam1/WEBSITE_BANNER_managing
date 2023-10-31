@@ -1,0 +1,191 @@
+:root {
+  --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+  --SecondaryColorManagerDashboard: hsl(218, 35%, 34%);
+  --WhiteTextColorMgDashboard: hsl(0, 0%, 100%);
+  --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+  --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+  --blackColorManagerDashboard: hsl(0, 0%, 18%);
+  --textColorManagerDashboard: hsl(0, 0%, 83%);
+  --bgColorManagerDashboard: hsl(218, 24%, 61%);
+  --greyTextManagerDashboard: rgb(144, 144, 144);
+  --inputColorManagerDashboard: hsl(240, 12%, 97%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.sideBarMg {
+  background: var(--PrimaryColorManagerDashboard);
+  width: 18%;
+  height: 100%;
+  gap: 0.5rem;
+  padding-left: 1px;
+  overflow: auto;
+}
+.sideBarMg .logoMgDiv {
+  padding: 0.5rem 1.5rem 0rem 0.5rem;
+  cursor: pointer;
+}
+.sideBarMg .logoMgDiv .iconMgdashboardLogo {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: var(--biggestFontSize);
+  color: var(--WhiteTextColorMgDashboard);
+}
+.sideBarMg .logoMgDiv h2 {
+  font-size: var(--h2FontSize);
+  color: var(--WhiteTextColorMgDashboard);
+}
+.sideBarMg .menuDivMgDashboard .divMgTitle,
+.sideBarMg .settingsDivMg .divMgTitle {
+  font-size: var(--h3FontSize);
+  color: var(--textColorManagerDashboard);
+  padding: 0 1.5rem 1.5rem;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem {
+  padding: 0.2rem 1.5rem;
+  width: 100%;
+  position: relative;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem::before,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem::before {
+  position: absolute;
+  content: "";
+  height: 0%;
+  left: 0;
+  width: 5px;
+  bottom: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--WhiteTextColorMgDashboard);
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button .menuMgLink,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem button .menuMgLink {
+  color: var(--greyTextManagerDashboard);
+  font-weight: 500;
+  transition: 0;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button .menuMgLink .icon-Mgdashboard,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem button .menuMgLink .icon-Mgdashboard {
+  margin-right: 0.5rem;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button:hover .menuMgLink,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem button:hover .menuMgLink {
+  color: var(--WhiteTextColorMgDashboard);
+  transition: 0;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem .menuMgLink,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem .menuMgLink {
+  color: var(--greyTextManagerDashboard);
+  font-weight: 500;
+  transition: 0;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem .menuMgLink .icon-Mgdashboard,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem .menuMgLink .icon-Mgdashboard {
+  margin-right: 0.5rem;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem:hover .menuMgLink,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem:hover .menuMgLink {
+  color: var(--WhiteTextColorMgDashboard);
+  transition: 0;
+}
+.sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem:hover::before,
+.sideBarMg .settingsDivMg .menuMgLists .MglistItem:hover::before {
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 990px) {
+  .sideBarMg {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sideBarMg .logoMgDiv {
+    padding-left: 0.5rem;
+  }
+}
+@media screen and (max-width: 880px) {
+  .sideBarMg .logoMgDiv {
+    text-align: center;
+    margin: auto;
+    padding: 1.5rem 0.5rem 0;
+  }
+  .sideBarMg .logoMgDiv img {
+    max-width: 50px !important;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .sideBarMg .logoMgDiv h2 {
+    display: none;
+  }
+  .sideBarMg .menuDivMgDashboard .divMgTitle,
+  .sideBarMg .menuDivMgDashboard .smallText,
+  .sideBarMg .settingsDivMg .divMgTitle,
+  .sideBarMg .settingsDivMg .smallText {
+    display: none;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists,
+  .sideBarMg .settingsDivMg .menuMgLists {
+    gap: 2.5rem;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button .menuMgLink,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem button .menuMgLink {
+    justify-content: center;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button .menuMgLink .icon-Mgdashboard,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem button .menuMgLink .icon-Mgdashboard {
+    font-size: var(--h1FontSize);
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem .menuMgLink,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem .menuMgLink {
+    justify-content: center;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem .menuMgLink .icon-Mgdashboard,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem .menuMgLink .icon-Mgdashboard {
+    font-size: var(--h1FontSize);
+  }
+}
+@media screen and (max-width: 390px) {
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem {
+    padding: 0.2rem 0.5rem;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button .menuMgLink,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem button .menuMgLink {
+    justify-content: center;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem button .menuMgLink .icon-Mgdashboard,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem button .menuMgLink .icon-Mgdashboard {
+    font-size: var(--h2FontSize);
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem .menuMgLink,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem .menuMgLink {
+    justify-content: center;
+  }
+  .sideBarMg .menuDivMgDashboard .menuMgLists .MglistItem .menuMgLink .icon-Mgdashboard,
+  .sideBarMg .settingsDivMg .menuMgLists .MglistItem .menuMgLink .icon-Mgdashboard {
+    font-size: var(--h2FontSize);
+  }
+}/*# sourceMappingURL=managersidebarlistheader.css.map */

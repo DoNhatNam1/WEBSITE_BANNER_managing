@@ -1,0 +1,5 @@
+SELECT DISTINCT [Manager].[manager_id]
+        ,[Manager].[MgAccountName]
+        ,[Manager].[MgPass]
+        ,[Manager].[MgEmail]
+FROM [dbo].[Manager]

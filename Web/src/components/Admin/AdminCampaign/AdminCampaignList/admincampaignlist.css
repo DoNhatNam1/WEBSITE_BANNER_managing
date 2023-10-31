@@ -1,0 +1,43 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 240);
+  --cardBG: rgb(225, 225, 225);
+}
+
+.list-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.list-group table, .list-group th, .list-group td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 0.8rem;
+  background-color: #c9e9e9;
+}
+.list-group table .sub, .list-group th .sub, .list-group td .sub {
+  border: none;
+  border-top: 2px solid black;
+}
+.list-group .table-container {
+  margin-top: 2rem;
+  padding: 0.7rem;
+  width: 80%;
+}
+.list-group .table-container .bg-primary .titles {
+  text-align: center;
+}
+.list-group .table-container .pg {
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}/*# sourceMappingURL=admincampaignlist.css.map */

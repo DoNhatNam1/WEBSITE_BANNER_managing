@@ -1,0 +1,319 @@
+:root {
+  --primaryColor: hsl(94, 55%, 56%);
+  --hoverColor: hsl(93, 75%, 76%);
+  --paleGreen: hsl(96, 75%, 89%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(0, 0%, 18%);
+  --TextColor: hsl(240, 4%, 36%);
+  --GreyText: hsl(0, 0%, 75%);
+  --InputColor: hsl(330, 12%, 97%);
+  --bgColor: hsl(113, 11%, 85%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FOntSIze: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.icon-login {
+  font-size: var(--h2FontSize);
+  color: var(--GreyText);
+}
+
+.btn-login {
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--GreyText);
+}
+
+.btn-login .icon {
+  margin-left: 0.5rem;
+}
+
+.btn-login:hover {
+  color: var(--primaryColor);
+  background: var(--paleGreen);
+}
+
+.loginPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+.loginPage .container-login {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+.loginPage .container-login .videoDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.loginPage .container-login .videoDiv video, .loginPage .container-login .videoDiv .footerDiv {
+  position: absolute;
+}
+.loginPage .container-login .videoDiv video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.loginPage .container-login .videoDiv .textDiv {
+  position: relative;
+}
+.loginPage .container-login .videoDiv .textDiv .title {
+  color: var(--WhiteColor);
+  font-size: 35px;
+  font-weight: 800;
+}
+.loginPage .container-login .videoDiv .textDiv p {
+  color: var(--WhiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+.loginPage .container-login .videoDiv .footerDiv {
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.248);
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
+.loginPage .container-login .videoDiv .footerDiv .text {
+  color: var(--WhiteColor);
+}
+.loginPage .container-login .videoDiv .footerDiv .btn-login {
+  background: var(--WhiteColor);
+  color: var(--primaryColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+.loginPage .container-login .videoDiv .footerDiv .btn-login:hover {
+  background: var(--hoverColor);
+  color: var(--BlackColor);
+}
+.loginPage .container-login .formDiv {
+  flex-basis: 50%;
+  margin: auto;
+  flex-direction: column;
+  gap: 0.1rem;
+  transform: translateY(-1rem);
+}
+.loginPage .container-login .formDiv .headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.loginPage .container-login .formDiv .headerDiv .icon-login {
+  font-size: 40px;
+  color: var(--primaryColor);
+}
+.loginPage .container-login .formDiv .headerDiv h3 {
+  font-size: 25px;
+  color: var(--BlackColor);
+  font-weight: 600;
+}
+.loginPage .container-login .formDiv .form {
+  gap: 0.4rem;
+}
+.loginPage .container-login .formDiv .form .inputDiv .icon {
+  color: var(--GreyText);
+}
+.loginPage .container-login .formDiv .form .inputDiv input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 200px;
+}
+.loginPage .container-login .formDiv .form .inputDiv label {
+  color: var(--BlackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  display: block;
+}
+.loginPage .container-login .formDiv .form .inputDiv .input {
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--InputColor);
+  border-radius: 10px;
+}
+.loginPage .container-login .formDiv .form .btn-login {
+  padding: 0.8rem;
+  background: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--WhiteColor);
+  align-items: center;
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.1rem;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+}
+.loginPage .container-login .formDiv .form .btn-login .icon-login {
+  font-size: 25px;
+  transition: 0.3s ease;
+  color: var(--WhiteColor);
+}
+.loginPage .container-login .formDiv .form .btn-login:hover {
+  background: var(--hoverColor);
+  color: var(--BlackColor);
+}
+.loginPage .container-login .formDiv .form .btn-login:hover .icon-login {
+  color: var(--BlackColor);
+  transform: translateX(5px);
+}
+.loginPage .container-login .formDiv .form .forgotPassword {
+  font-size: 13px;
+  color: var(--BlackColor);
+  opacity: 0.7;
+  text-align: center;
+}
+.loginPage .container-login .formDiv .form .forgotPassword a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .loginPage .container-login {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .loginPage .container-login .videoDiv {
+    width: 100%;
+  }
+  .loginPage .container-login .videoDiv .textDiv .title {
+    font-size: 20px;
+    transform: translateY(-1.2rem);
+  }
+  .loginPage .container-login .videoDiv .textDiv p {
+    padding: 1rem;
+    transform: translateY(-1.2rem);
+  }
+  .loginPage .container-login .videoDiv .footerDiv .text {
+    font-size: 12px !important;
+  }
+  .loginPage .container-login .videoDiv .footerDiv .btn-login {
+    padding: 0.4rem 0.5rem;
+  }
+  .loginPage .container-login .formDiv {
+    gap: 1rem;
+    transform: translateY(1rem);
+  }
+  .loginPage .container-login .formDiv .headerDiv {
+    padding: 0.1rem 0 !important;
+  }
+  .loginPage .container-login .formDiv .headerDiv img {
+    padding-bottom: 0;
+    width: 40px;
+  }
+  .loginPage .container-login .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .loginPage .container-login .formDiv .form {
+    gap: 0.3rem;
+  }
+  .loginPage .container-login .formDiv .form .inputDiv input {
+    width: 100%;
+  }
+  .loginPage .container-login .formDiv .form .btn-login {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .loginPage .container-login .videoDiv .footerDiv .text {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 616px) {
+  .loginPage .container-login .videoDiv .textDiv .title {
+    font-size: 18px !important;
+  }
+  .loginPage .container-login .videoDiv .textDiv p {
+    font-size: 12px;
+    transform: translateY(-2rem) !important;
+  }
+  .loginPage .container-login .videoDiv .footerDiv .btn-login {
+    padding: 0.5rem 0.7rem !important;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .loginPage .container-login .videoDiv .textDiv .title {
+    font-size: 25px;
+    transform: translateY(-1.2rem);
+  }
+  .loginPage .container-login .videoDiv .textDiv p {
+    padding: 1rem;
+    transform: translateY(-1.2rem);
+  }
+  .loginPage .container-login .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .container-login .videoDiv .footerDiv .btn-login {
+    padding: 0.8rem 1.5rem;
+  }
+  .loginPage .container-login .formDiv .headerDiv {
+    padding: 1.5rem 0;
+  }
+  .loginPage .container-login .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .loginPage .container-login .formDiv .form .inputDiv input {
+    width: 100%;
+    max-width: 200px;
+  }
+  .loginPage .container-login .formDiv .form .btn-login {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (max-width: 927px) {
+  .loginPage .container-login {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .loginPage .container-login .videoDiv .footerDiv .text {
+    font-size: 13px;
+  }
+  .loginPage .container-login .videoDiv .footerDiv .btn-login {
+    padding: 0.8rem 1.1rem;
+  }
+}/*# sourceMappingURL=login.css.map */

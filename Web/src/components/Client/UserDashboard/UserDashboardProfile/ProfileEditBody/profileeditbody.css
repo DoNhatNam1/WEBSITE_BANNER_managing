@@ -1,0 +1,175 @@
+:root {
+  --PrimaryColorDashboard: hsl(94, 59%, 35%);
+  --HoverCoverDashboard: #bdf094;
+  --paleGreenDashboard: hsl(96, 75%, 85%);
+  --whiteColorDashboard: hsl(0, 0%, 100%);
+  --blackColorDashboard: hsl(0, 0%, 18%);
+  --textColorDashboard: hsl(240, 1%, 48%);
+  --bgColorDashboard: hsl(220, 10%, 94%);
+  --greyTextDashboard: rgb(190, 190, 190);
+  --inputColorDashboard: hsl(330, 12%, 97%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --bigFontSize: 2rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FOntSIze: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.mainContent {
+  width: 82%;
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+.mainContent .formTitle {
+  justify-content: center;
+}
+.mainContent .formTitle h1 {
+  color: var(--blackColorDashboard);
+}
+.mainContent .formContainer {
+  height: 500px;
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mainContent .formContainer .edit-form {
+  flex-basis: 60%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.mainContent .formContainer .edit-form .label-container {
+  gap: 0.5rem;
+}
+.mainContent .formContainer .edit-form .label-container .labelName {
+  width: 100px;
+}
+.mainContent .formContainer .edit-form .label-container .labelName p {
+  width: auto;
+}
+.mainContent .formContainer .edit-form .label-container .input-profile {
+  border: 1px solid var(--greyTextDashboard);
+  background: var(--inputColorDashboard);
+  padding: 0.4rem;
+  border-radius: 5px;
+  width: 400px;
+}
+.mainContent .formContainer .edit-form .label-container-img {
+  gap: 0.5rem;
+}
+.mainContent .formContainer .edit-form .label-container-img .labelName {
+  width: 100px;
+}
+.mainContent .formContainer .edit-form .label-container-img .labelName p {
+  width: auto;
+}
+.mainContent .formContainer .edit-form .label-container-img .input-profile-img {
+  border: hidden;
+  background: none;
+  padding: 0.4rem;
+  width: 400px;
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove {
+  justify-content: space-between;
+  gap: 20.1rem;
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove .image-container {
+  width: 50px;
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove .image-container .profile-img {
+  width: 100%;
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove .btn-image-container .btn-image {
+  border: none;
+  background: none;
+  outline: none;
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove .btn-image-container .btn-image .icon-dashboard {
+  font-size: var(--bigFontSize);
+  color: var(--blackColorDashboard);
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove .btn-image-container:hover .btn-image {
+  background: rgb(241, 103, 103);
+}
+.mainContent .formContainer .edit-form .label-container-img .img-and-button-remove .btn-image-container:hover .btn-image .icon-dashboard {
+  color: var(--whiteColorDashboard);
+}
+.mainContent .formContainer .edit-form .button-update {
+  width: 60%;
+}
+.mainContent .formContainer .edit-form .button-update .btn {
+  padding: 0.8rem 10.5rem;
+  border-radius: 5px;
+}
+.mainContent .formContainer .edit-form .button-update .btn .button-container-profile-edit {
+  gap: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+  .mainContent .formContainer .edit-form {
+    gap: 0.6rem;
+  }
+  .mainContent .formContainer .edit-form .button-update {
+    width: 100%;
+  }
+  .mainContent .formContainer .edit-form .label-container {
+    flex-direction: column;
+  }
+  .mainContent .formContainer .edit-form .label-container .labelName {
+    transform: translateX(-9rem);
+  }
+  .mainContent .formContainer .edit-form .label-container-img {
+    flex-direction: column;
+  }
+  .mainContent .formContainer .edit-form .label-container-img .labelName {
+    transform: translateX(-9rem);
+  }
+}
+@media screen and (max-width: 570px) {
+  .mainContent .formContainer .edit-form {
+    align-items: start;
+  }
+  .mainContent .formContainer .edit-form .label-container .labelName {
+    transform: translateX(-4.5rem);
+  }
+  .mainContent .formContainer .edit-form .label-container .input-profile {
+    width: 250px;
+  }
+  .mainContent .formContainer .edit-form .label-container-img .labelName {
+    transform: translateX(-4.5rem);
+  }
+  .mainContent .formContainer .edit-form .label-container-img .input-profile-img {
+    width: 250px;
+  }
+  .mainContent .formContainer .edit-form .label-container-img .img-and-button-remove {
+    gap: 10rem;
+  }
+  .mainContent .formContainer .edit-form .button-update .btn {
+    padding: 0.8rem 5.7rem;
+  }
+}
+@media screen and (max-width: 385px) {
+  .mainContent .formTitle h1 {
+    font-size: var(--h1FontSize);
+  }
+  .mainContent .formContainer .edit-form .label-container .input-profile {
+    width: 200px;
+  }
+  .mainContent .formContainer .edit-form .label-container-img .input-profile {
+    width: 200px;
+  }
+  .mainContent .formContainer .edit-form .label-container-img .input-profile-img {
+    width: 200px;
+  }
+  .mainContent .formContainer .edit-form .label-container-img .img-and-button-remove {
+    gap: 7.5rem;
+  }
+  .mainContent .formContainer .edit-form .button-update .btn {
+    padding: 0.8rem 4.1rem;
+  }
+}/*# sourceMappingURL=profileeditbody.css.map */

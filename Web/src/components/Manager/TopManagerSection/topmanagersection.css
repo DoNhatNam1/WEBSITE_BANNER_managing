@@ -1,0 +1,223 @@
+:root {
+  --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+  --SecondaryColorManagerDashboard: hsl(217, 61%, 21%);
+  --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+  --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+  --blackColorManagerDashboard: hsl(0, 0%, 18%);
+  --textColorManagerDashboard: hsl(0, 0%, 83%);
+  --bgColorManagerDashboard: hsl(218, 24%, 61%);
+  --greyTextManagerDashboard: hsl(34, 4%, 39%);
+  --inputColorManagerDashboard: hsl(240, 12%, 97%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.TopMgSecContainer {
+  flex-basis: 14%;
+  width: 96%;
+  position: sticky;
+}
+.TopMgSecContainer .TopMgDivContainer {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup {
+  gap: 1.688rem;
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MessMgGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MessMgGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MessMgGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MessMgGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .CheckListMgGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .CheckListMgGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .CheckListMgGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .CheckListMgGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MailBoxMgGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MailBoxMgGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MailBoxMgGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopLeftMgGroup .MailBoxMgGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup {
+  gap: 1.25rem;
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .ZoomMgGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: var(--PrimaryColorManagerDashboard);
+  border-radius: 5px;
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .ZoomMgGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .ZoomMgGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .ZoomMgGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .SearchMgGroup .SearchInputMgDiv {
+  height: 45px;
+  border-radius: 5px 0px 0px 5px;
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .SearchMgGroup .SearchInputMgDiv input {
+  height: 100%;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: none;
+  background: var(--PrimaryColorManagerDashboard);
+  padding-left: 1rem;
+  color: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .SearchMgGroup .SearchMgIconDiv {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .SearchMgGroup .SearchMgIconDiv .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .NotificationMgGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .NotificationMgGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .NotificationMgGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .NotificationMgGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MgProfileCardGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MgProfileCardGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MgProfileCardGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MgProfileCardGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MenuChatAndCheckListGroup {
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: var(--PrimaryColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MenuChatAndCheckListGroup .iconMgDashboard {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: var(--textColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MenuChatAndCheckListGroup:hover {
+  background-color: var(--bgColorManagerDashboard);
+}
+.TopMgSecContainer .TopMgDivContainer .TopRightMgGroup .MenuChatAndCheckListGroup:hover .iconMgDashboard {
+  fill: var(--blackColorManagerDashboard);
+}/*# sourceMappingURL=topmanagersection.css.map */

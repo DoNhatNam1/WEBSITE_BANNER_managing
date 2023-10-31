@@ -1,0 +1,304 @@
+:root{
+    --PrimaryColorDashboard: hsl(94, 59%, 35%);
+    --HoverCoverDashboard: #bdf094;
+    --paleGreenDashboard: hsl(96, 75%, 85%);
+    --whiteColorDashboard: hsl(0, 0%, 100%);
+    --blackColorDashboard: hsl(0, 0%, 18%);
+    --textColorDashboard: hsl(240, 1%, 48%);
+    --bgColorDashboard: hsl(220, 10%, 94%);
+    --greyTextDashboard: rgb(190, 190, 190);
+    --inputColorDashboard: hsl(330, 12%, 97%);
+
+      /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.sideBar{
+    background: var(--whiteColorDashboard);
+    box-shadow: 1px 0px 4px var(--greyTextDashboard);
+    width: 18%;
+    height: 100%;
+    gap: 3rem;
+    padding-left: 1px;
+    overflow-y: auto;
+
+    .logoDiv{
+        padding: 1.5rem 1.5rem 0rem 0.5rem;
+        cursor: pointer;
+
+        // img{
+        //     max-width: 60px !important;
+        //     margin-right: .5rem;
+        //     background: none;
+        //     border-radius: 2px;
+        //     padding: .2rem;
+        // }
+
+        .icon-userdashboard-logo{
+            margin-right: .5rem;
+            margin-left: .5rem;
+            font-size: var(--biggestFontSize);
+            color: var(--PrimaryColorDashboard);
+        }
+
+        h2{
+            font-size: var(--h2FontSize);
+            color: var(--PrimaryColorDashboard);
+        }
+    }
+
+    .menuDivDashboard, .settingsDiv{
+        .divTitle{
+            font-size: var(--h3FontSize);
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .menuLists{
+            .listItem{
+                padding: .2rem 1.5rem;
+                width: 100%;
+                position: relative;
+
+
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    height: 0%;
+                    left: 0;
+                    width: 5px;
+                    bottom: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background: var(--PrimaryColorDashboard);
+                }
+
+                button{
+                    border: none;
+                    outline: none;
+                    background: none;
+                    cursor: pointer;
+
+                    .menuLink{
+                        color: var(--greyTextDashboard);
+                        font-weight: 500;
+                        transition: 0;
+    
+                        .icon-dashboard{
+                            margin-right: .5rem;
+                        }
+                    }
+
+                    &:hover .menuLink{
+                        color: var(--PrimaryColorDashboard);
+                        transition: 0;
+                }
+                }
+
+                .menuLink{
+                    color: var(--greyTextDashboard);
+                    font-weight: 500;
+                    transition: 0;
+
+                    .icon-dashboard{
+                        margin-right: .5rem;
+                    }
+                }
+
+                &:hover .menuLink{
+                    color: var(--PrimaryColorDashboard);
+                    transition: 0;
+            }
+
+
+
+            &:hover::before{
+                height: 100%;
+                transition: .3s ease;
+            }
+        }
+    }
+}
+
+.sideBarCard{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+
+    .icon-dashboard{
+        position: absolute;
+        background: var(--HoverCoverDashboard);
+        border: 10px solid var(--whiteColorDashboard);
+        font-size: 3rem;
+        border-radius: 50%;
+        top: -8px;
+        right: 50%;
+        transform: translate(50%);
+        z-index: 100;
+    }
+
+    .cardContent{
+        position: relative;
+        padding: 1rem;
+        background: var(--HoverCoverDashboard);
+        border-radius: 10px;
+        overflow: hidden;
+
+        h3{
+            font-size: var(--h3FontSize);
+            margin-top: 1rem;
+            padding: 1rem 0;
+            font-weight: 800;
+            color: var(--blackColorDashboard);
+        }
+
+        p{
+            font-size: var(--normalFontSize);
+            color: var(--textColorDashboard);
+            padding-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .btn-dashboard{
+            position: relative;
+            color: var(--textColorDashboard);
+            z-index: 1000;
+            padding: .5rem;
+        }
+
+        .circle1, .circle2{
+            position: absolute;
+            background: var(--paleGreenDashboard);
+            border-radius: 50%;
+            opacity: .7;
+        }
+
+        .circle1{
+            height: 100px;
+            width: 100px;
+            top: -50px;
+            left: -50px;
+        }
+
+        .circle2{
+            height: 150px;
+            width: 150px;
+            top: -80px;
+            right: -70px;
+            z-index: 1;
+        }
+    }
+}
+}
+
+//MEDIA QUERIES =======>
+@media screen and (max-width: 990px){
+    .sideBar{
+        padding-bottom: 2rem;
+        .sideBarCard{
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .sideBar{
+        .logoDiv{
+            padding-left: .5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 880px){
+    .sideBar{
+        .logoDiv{
+            text-align: center;
+            margin: auto;
+            padding: 1.5rem .5rem 0;
+
+            img{
+                max-width: 50px !important;
+                margin: 0;
+                border-radius: 10px;
+                // padding: .5rem;
+            }
+            h2{
+                display: none;
+            }
+        }
+
+        .menuDivDashboard, .settingsDiv {
+            .divTitle, .smallText {
+                display: none;
+            }
+
+            .menuLists{
+                gap: 2.5rem;
+                .listItem{
+
+                    button{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+
+
+                        .menuLink{
+                            justify-content: center;
+    
+                            .icon-dashboard{
+                                font-size: var(--h1FontSize);
+                            }
+                        }
+                    }
+
+                    .menuLink{
+                        justify-content: center;
+
+                        .icon-dashboard{
+                            font-size: var(--h1FontSize);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px){
+    .sideBar{
+        .menuDivDashboard, .settingsDiv{
+            .menuLists{
+                .listItem{
+                    padding: .2rem .5rem;
+
+                    button{
+                        .menuLink{
+                            justify-content: center;
+    
+                            .icon-dashboard{
+                                font-size: var(--h2FontSize);
+                            }
+                        }
+                    }
+
+                    .menuLink{
+                        justify-content: center;
+
+                        .icon-dashboard{
+                            font-size: var(--h2FontSize);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

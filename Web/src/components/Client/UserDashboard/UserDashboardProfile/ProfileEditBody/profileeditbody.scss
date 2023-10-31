@@ -1,0 +1,264 @@
+:root{
+    --PrimaryColorDashboard: hsl(94, 59%, 35%);
+    --HoverCoverDashboard: #bdf094;
+    --paleGreenDashboard: hsl(96, 75%, 85%);
+    --whiteColorDashboard: hsl(0, 0%, 100%);
+    --blackColorDashboard: hsl(0, 0%, 18%);
+    --textColorDashboard: hsl(240, 1%, 48%);
+    --bgColorDashboard: hsl(220, 10%, 94%);
+    --greyTextDashboard: rgb(190, 190, 190);
+    --inputColorDashboard: hsl(330, 12%, 97%);
+
+      /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --bigFontSize: 2rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FOntSIze: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+
+.mainContent{
+    width: 82%;
+    height: 100%;
+    padding: 2rem;
+    overflow: auto;
+
+    .formTitle{
+        justify-content: center;
+
+        h1{
+            color: var(--blackColorDashboard);
+        }
+    }
+
+    .formContainer{
+        height: 500px;
+        margin-top: 2rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        
+        .edit-form{
+            flex-basis: 60%;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .label-container{
+                gap: .5rem;
+
+                .labelName{
+                    width: 100px;
+
+                    p{
+                        width: auto;
+                    }
+                }
+
+                .input-profile{
+                    border: 1px solid var(--greyTextDashboard);
+                    background: var(--inputColorDashboard);
+                    padding: .4rem;
+                    border-radius: 5px;
+                    width: 400px;
+                }
+
+            }
+
+            .label-container-img{
+                gap: .5rem;
+
+                .labelName{
+                    width: 100px;
+
+                    p{
+                        width: auto;
+                    }
+                }
+
+                .input-profile-img{
+                    border: hidden;
+                    background: none;
+                    padding: .4rem;
+                    width: 400px;
+                }
+
+                .img-and-button-remove{
+                    justify-content: space-between;
+                    gap: 20.1rem;
+
+                    .image-container{
+                        width: 50px;
+
+                        .profile-img{
+                            width:100%;
+                        }
+                    }
+
+                    .btn-image-container{
+
+                        .btn-image{
+                            border: none;
+                            background: none;
+                            outline: none;
+                            .icon-dashboard{
+                                font-size: var(--bigFontSize);
+                                color: var(--blackColorDashboard);
+                            }
+    
+                           
+                        }
+
+                        &:hover .btn-image{
+                            background: rgb(241, 103, 103);
+
+                            .icon-dashboard{
+                                color: var(--whiteColorDashboard);
+                            }
+                            
+                        }
+                        
+                    }
+                }
+
+            }
+
+            .button-update{
+                width: 60%;
+
+
+                .btn{
+                    padding: .8rem 10.5rem;
+                    border-radius: 5px;
+
+                    .button-container-profile-edit{
+                        gap: 1rem;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+//MEDIA QUERIES =============>
+@media screen and (max-width: 720px){
+
+    .mainContent{
+        .formContainer{
+            .edit-form{
+                gap: .6rem;
+                .button-update{
+                    width: 100%
+                }
+
+                .label-container{
+                    flex-direction: column;
+    
+                    .labelName{
+                        transform: translateX(-9rem);
+                    }
+                }
+    
+                .label-container-img{
+                    flex-direction: column;
+    
+                    .labelName{
+                        transform: translateX(-9rem);
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width:570px){
+    .mainContent{
+        .formContainer{
+            .edit-form{
+                align-items: start;
+                .label-container{
+
+                    .labelName{
+                        transform: translateX(-4.5rem);
+                    }
+
+                    .input-profile{
+                        width: 250px;
+                    }
+                    
+                }
+
+                .label-container-img{
+
+                    .labelName{
+                        transform: translateX(-4.5rem);
+                    }
+
+                    .input-profile-img{
+                        width: 250px;
+                    }
+
+                    .img-and-button-remove{
+                        gap: 10rem;
+
+                    }
+                }
+
+                .button-update{
+                    .btn{
+                        padding: .8rem 5.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:385px){
+    .mainContent{
+        .formTitle{
+            h1{
+                font-size: var(--h1FontSize);
+            }
+        }
+
+        .formContainer{
+            .edit-form{
+                .label-container{
+                    .input-profile{
+                        width: 200px;
+                    }
+                }
+
+                .label-container-img{
+                    .input-profile{
+                        width: 200px;
+                    }
+
+                    .input-profile-img{
+                        width: 200px;
+                    }
+
+                    .img-and-button-remove{
+                        gap: 7.5rem;
+                    }
+                }
+
+                .button-update{
+                    .btn{
+                        padding: .8rem 4.1rem;
+                    }
+                }
+            }
+        }
+    }
+}

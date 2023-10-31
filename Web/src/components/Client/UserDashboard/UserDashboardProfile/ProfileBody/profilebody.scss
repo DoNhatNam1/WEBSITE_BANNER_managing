@@ -1,0 +1,57 @@
+:root{
+    --PrimaryColorDashboard: hsl(94, 59%, 35%);
+    --HoverCoverDashboard: #bdf094;
+    --paleGreenDashboard: hsl(96, 75%, 85%);
+    --whiteColorDashboard: hsl(0, 0%, 100%);
+    --blackColorDashboard: hsl(0, 0%, 18%);
+    --textColorDashboard: hsl(240, 1%, 48%);
+    --bgColorDashboard: hsl(220, 10%, 94%);
+    --greyTextDashboard: rgb(190, 190, 190);
+    --inputColorDashboard: hsl(330, 12%, 97%);
+    --h2titleprofileColor: hsl(225, 65%, 55%);
+    $link-color-active: #000; // màu cho tab được chọn
+    $link-border-color-inactive: var(--greyTextDashboard);
+
+      /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.bodyProfileSection{
+    width: 100%;
+    height: 300px;
+    
+    .labelGp{
+        gap: 2rem;
+
+        .labelItem{
+            border-bottom: 1px solid var(--greyTextDashboard);
+            gap: 8rem;
+            align-items: flex-start;
+                .spanItem{
+                    width: 150px;
+                    span{
+                        font-weight: 600;
+                    }
+                }
+
+        }
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .bodyProfileSection{
+        .labelGp{
+            padding-bottom: 2rem;
+            .labelItem{
+                flex-direction: column;
+                gap: .2rem;
+            }
+        }
+    }
+}

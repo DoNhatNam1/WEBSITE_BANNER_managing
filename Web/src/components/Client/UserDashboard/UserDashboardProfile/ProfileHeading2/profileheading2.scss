@@ -1,0 +1,167 @@
+:root{
+    --PrimaryColorDashboard: hsl(94, 59%, 35%);
+    --HoverCoverDashboard: #bdf094;
+    --paleGreenDashboard: hsl(96, 75%, 85%);
+    --whiteColorDashboard: hsl(0, 0%, 100%);
+    --blackColorDashboard: hsl(0, 0%, 18%);
+    --textColorDashboard: hsl(240, 1%, 48%);
+    --bgColorDashboard: hsl(220, 10%, 94%);
+    --greyTextDashboard: rgb(190, 190, 190);
+    --inputColorDashboard: hsl(330, 12%, 97%);
+    --h2titleprofileColor: hsl(225, 65%, 55%);
+
+      /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.headingSection{
+    justify-content: space-between;
+
+    .ImgContainer{
+        width: 250px;
+        height: 200px;
+
+        img{
+            width: 80%;
+            height: 84%;
+            border-radius: 50%;
+        }
+    }
+
+    .NameAndSelectGroup{
+        height: auto;
+        flex-basis: 60%;
+        gap: .5rem;
+        h5{
+            
+            font-size: var(--h2FontSize);
+            color: var(--blackColorDashboard);
+            font-weight: 500;
+        }
+        h6{
+            font-size: var(--h3FontSize);
+            color: var(--PrimaryColorDashboard);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .linkGp {        
+            border-bottom: 1px solid var(--greyTextDashboard);
+            margin: 8px 16px;
+            padding-bottom: 1px;
+            
+            button {
+                transform: translateY(2px);
+                border: none;
+              border-bottom: 2px solid var(--greyTextDashboard);
+              transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+              padding: 8px 16px;
+              text-decoration: none;
+              color: var(--PrimaryColorDashboard); 
+              font-weight: 700;
+              
+              &.active {
+                border-color: var(--PrimaryColorDashboard);
+                color: var(--textColorDashboard);
+              }
+          
+              &:hover {
+                color: var(--blackColorDashboard); 
+                background-color: var(--paleGreenDashboard); 
+              }
+            }
+          }
+}
+
+    .edit-btn{
+        font-weight: 600;
+        flex-basis: 15%;
+
+        
+        button{
+            color: var(--whiteColorDashboard);
+            font-size: var(--smallFontSize);
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .headingSection{
+        .ImgContainer{
+            width: 200px;
+            img{
+                width: 80%;
+            }
+        }
+
+        .NameAndSelectGroup{
+            flex-basis: 40%;
+        }
+
+        .edit-btn{
+            flex-basis: 25%;
+            display: flex;
+            justify-content: flex-end;
+            button{
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .headingSection{
+        flex-direction: column;
+    }
+
+    .ImgContainer{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: .5rem;
+    }
+    
+    .NameAndSelectGroup{
+        h5{
+            text-align: center;
+        }
+
+        h6{
+            text-align: center;
+        }
+    }
+
+    .edit-btn{
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .headingSection{
+        .NameAndSelectGroup{
+            .linkGp{
+                button{
+                    font-size: var(--smallFontSize);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px){
+    .headingSection{
+        .ImgContainer{
+            img{
+                width: 70%;
+                height: 74%;
+            }
+        }
+    }
+}

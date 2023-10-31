@@ -1,0 +1,149 @@
+:root {
+    --arial-h2-font-family: "Arial-Bold", Helvetica;
+    --arial-h2-font-size: 49px;
+    --arial-h2-font-style: normal;
+    --arial-h2-font-weight: 700;
+    --arial-h2-letter-spacing: 0px;
+    --arial-h2-line-height: normal;
+    --popins-h1-font-family: "Poppins-Regular", Helvetica;
+    --popins-h1-font-size: 61px;
+    --popins-h1-font-style: normal;
+    --popins-h1-font-weight: 400;
+    --popins-h1-letter-spacing: 0px;
+    --popins-h1-line-height: normal;
+    --popins-h2-font-family: "Poppins-Regular", Helvetica;
+    --popins-h2-font-size: 49px;
+    --popins-h2-font-style: normal;
+    --popins-h2-font-weight: 400;
+    --popins-h2-letter-spacing: 0px;
+    --popins-h2-line-height: normal;
+    --popins-h3-font-family: "Poppins-Regular", Helvetica;
+    --popins-h3-font-size: 39px;
+    --popins-h3-font-style: normal;
+    --popins-h3-font-weight: 400;
+    --popins-h3-letter-spacing: 0px;
+    --popins-h3-line-height: normal;
+    --popins-h4-font-family: "Poppins-Regular", Helvetica;
+    --popins-h4-font-size: 31px;
+    --popins-h4-font-style: normal;
+    --popins-h4-font-weight: 400;
+    --popins-h4-letter-spacing: 0px;
+    --popins-h4-line-height: normal;
+    --popins-h5-font-family: "Poppins-Regular", Helvetica;
+    --popins-h5-font-size: 25px;
+    --popins-h5-font-style: normal;
+    --popins-h5-font-weight: 400;
+    --popins-h5-letter-spacing: 0px;
+    --popins-h5-line-height: normal;
+    --popins-h6-font-family: "Poppins-Regular", Helvetica;
+    --popins-h6-font-size: 20px;
+    --popins-h6-font-style: normal;
+    --popins-h6-font-weight: 400;
+    --popins-h6-letter-spacing: 0px;
+    --popins-h6-line-height: normal;
+    --popins-p-font-family: "Poppins-Regular", Helvetica;
+    --popins-p-font-size: 16px;
+    --popins-p-font-style: normal;
+    --popins-p-font-weight: 400;
+    --popins-p-letter-spacing: 0px;
+    --popins-p-line-height: normal;
+    --popins-semibold-h5-font-family: "Poppins-SemiBold", Helvetica;
+    --popins-semibold-h5-font-size: 25px;
+    --popins-semibold-h5-font-style: normal;
+    --popins-semibold-h5-font-weight: 600;
+    --popins-semibold-h5-letter-spacing: 0px;
+    --popins-semibold-h5-line-height: normal;
+    --popins-semibold-h6-font-family: "Poppins-SemiBold", Helvetica;
+    --popins-semibold-h6-font-size: 20px;
+    --popins-semibold-h6-font-style: normal;
+    --popins-semibold-h6-font-weight: 600;
+    --popins-semibold-h6-letter-spacing: 0px;
+    --popins-semibold-h6-line-height: normal;
+    --popins-span-font-family: "Poppins-Regular", Helvetica;
+    --popins-span-font-size: 12.800000190734863px;
+    --popins-span-font-style: normal;
+    --popins-span-font-weight: 400;
+    --popins-span-letter-spacing: 0px;
+    --popins-span-line-height: normal;
+    --variable-collection-blackcolorforweb: rgba(53, 53, 53, 1);
+    --variable-collection-blueforweb: rgba(48, 123, 191, 1);
+    --variable-collection-blur-yellow-color: rgba(253, 241, 218, 1);
+    --variable-collection-green-color: rgba(48, 168, 78, 1);
+    --variable-collection-grey-color: rgba(239, 239, 239, 1);
+    --variable-collection-greyblue-textcolor: rgba(156, 158, 173, 1);
+    --variable-collection-lightergreyforweb: rgba(234, 234, 234, 1);
+    --variable-collection-lightergreyforweb1: rgba(244, 244, 244, 1);
+    --variable-collection-lighterorangeforweb: rgba(251, 199, 121, 1);
+    --variable-collection-orangeblackforweb: rgba(125, 84, 24, 1);
+    --variable-collection-orangeforweb: rgba(247, 168, 50, 1);
+    --variable-collection-orangegreyforweb: rgba(166, 144, 112, 1);
+    --variable-collection-primary-blackbluecolor: rgba(12, 26, 50, 1);
+    --variable-collection-red-color: rgba(233, 61, 51, 1);
+    --variable-collection-secondary-blackbluelightercolor: rgba(18, 33, 60, 1);
+    --variable-collection-textcolorforweb: rgba(126, 126, 126, 1);
+    --variable-collection-white-text-color: rgba(255, 255, 255, 1);
+    --variable-collection-white-text-cover: rgba(202, 244, 252, 1);
+    --variable-collection-whitecolorforweb: rgba(255, 255, 255, 1);
+    --variable-collection-xanh-d-ng-m: rgba(59, 116, 255, 1);
+    --variable-collection-yellow-color: rgba(241, 173, 17, 1);
+  }
+
+
+.footernavbar-group {
+    align-items: flex-end;
+    display: inline-flex;
+    height: 53px;
+    position: relative;
+
+    .log-out-link {
+        align-items: center;
+        background-color: var(--variable-collection-primary-blackbluecolor);
+        display: flex;
+        flex-direction: column;
+        height: 54px;
+        justify-content: center;
+        position: relative;
+        width: 90px;
+      }
+      
+      .log-out-link .vector {
+        height: 16.5px;
+        position: relative;
+        width: 19.5px;
+      }
+
+      .mail-box-link {
+        align-items: center;
+        background-color: var(--variable-collection-primary-blackbluecolor);
+        display: flex;
+        flex-direction: column;
+        height: 54px;
+        justify-content: center;
+        position: relative;
+        width: 90px;
+      }
+      
+      .mail-box-link .vector {
+        height: 16px;
+        position: relative;
+        width: 20px;
+      }
+
+      .setting-link {
+        align-items: center;
+        background-color: var(--variable-collection-primary-blackbluecolor);
+        display: flex;
+        height: 54px;
+        justify-content: center;
+        position: relative;
+        width: 90px;
+      }
+      
+      .setting-link .vector {
+        height: 20.97px;
+        position: relative;
+        width: 19.86px;
+      }
+  }
+  
+  

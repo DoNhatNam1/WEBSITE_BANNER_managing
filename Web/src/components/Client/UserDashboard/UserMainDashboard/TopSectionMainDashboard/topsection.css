@@ -1,0 +1,332 @@
+:root {
+  --PrimaryColorDashboard: hsl(94, 59%, 35%);
+  --HoverCoverDashboard: #bdf094;
+  --paleGreenDashboard: hsl(96, 75%, 85%);
+  --whiteColorDashboard: hsl(0, 0%, 100%);
+  --blackColorDashboard: hsl(0, 0%, 18%);
+  --textColorDashboard: hsl(240, 1%, 48%);
+  --bgColorDashboard: hsl(220, 10%, 94%);
+  --greyTextDashboard: rgb(190, 190, 190);
+  --inputColorDashboard: hsl(330, 12%, 97%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.topSection .headerSection {
+  justify-content: space-between;
+}
+.topSection .headerSection .title-dashboard h1 {
+  font-size: var(--h1FontSize);
+  color: var(--blackColorDashboard);
+  font-weight: 700;
+}
+.topSection .headerSection .title-dashboard p {
+  font-size: var(--normalFontSize);
+  color: var(--textColorDashboard);
+  font-weight: 500;
+}
+.topSection .headerSection .searchBar {
+  padding: 1rem 2rem;
+  background: var(--whiteColorDashboard);
+  border-radius: 5px;
+  gap: 1rem;
+  box-shadow: 0 2px 4px var(--inputColorDashboard);
+}
+.topSection .headerSection .searchBar input {
+  border: none;
+  outline: none;
+  background: none;
+}
+.topSection .headerSection .searchBar .icon-dashboard {
+  color: var(--textColorDashboard);
+}
+.topSection .headerSection .searchBar .icon-dashboard:hover {
+  color: var(--PrimaryColorDashboard);
+}
+.topSection .headerSection .adminDiv {
+  gap: 1rem;
+}
+.topSection .headerSection .adminDiv .icon-dashboard {
+  font-size: var(--biggestFontSize);
+  background: var(--whiteColorDashboard);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 4px var(--inputColorDashboard);
+  color: var(--textColorDashboard);
+}
+.topSection .headerSection .adminDiv .adminImage {
+  border: 3px solid var(--whiteColorDashboard);
+  border-radius: 10px;
+  width: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px var(--inputColorDashboard);
+}
+.topSection .headerSection .adminDiv .adminImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.topSection .cardSection {
+  margin-top: 3rem;
+  gap: 1rem;
+}
+.topSection .cardSection .rightCard {
+  position: relative;
+  height: 200px;
+  flex-basis: 70%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.topSection .cardSection .rightCard .videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.topSection .cardSection .rightCard .videoDiv video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.topSection .cardSection .rightCard h1, .topSection .cardSection .rightCard p, .topSection .cardSection .rightCard .btn-dashboard {
+  z-index: 100;
+}
+.topSection .cardSection .rightCard h1 {
+  font-size: var(--h1FontSize);
+  color: var(--whiteColorDashboard);
+  font-weight: 800;
+}
+.topSection .cardSection .rightCard p {
+  padding: 1rem;
+  color: var(--paleGreenDashboard);
+  font-weight: 500;
+}
+.topSection .cardSection .rightCard .buttons {
+  gap: 1rem;
+}
+.topSection .cardSection .rightCard .buttons .btn-dashboard {
+  box-shadow: none;
+  padding: 0.8rem 1.5rem;
+  color: var(--PrimaryColorDashboard);
+  border: 2px solid transparent;
+}
+.topSection .cardSection .rightCard .buttons .transparent {
+  background: none;
+  border: 2px solid var(--paleGreenDashboard);
+  color: var(--paleGreenDashboard);
+}
+.topSection .cardSection .rightCard .buttons .transparent:hover {
+  background: var(--paleGreenDashboard);
+  color: var(--PrimaryColorDashboard);
+}
+.topSection .cardSection .leftCard {
+  flex-basis: 50%;
+}
+.topSection .cardSection .leftCard .mainDashboard {
+  position: relative;
+  padding: 1rem;
+  height: 200px;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+.topSection .cardSection .leftCard .mainDashboard::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  background: var(--paleGreenDashboard);
+  left: 0;
+  bottom: 0;
+  border-radius: 1rem;
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv {
+  z-index: 100;
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv h1 {
+  font-size: var(--h1FontSize);
+  padding-bottom: 1rem;
+  color: var(--blackColorDashboard);
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv .flex {
+  gap: 1.5rem;
+  font-weight: 500;
+  color: var(--blackColorDashboard);
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv .flex small {
+  font-size: var(--normalFontSize);
+  display: block;
+  color: var(--PrimaryColorDashboard);
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv .link {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv .link:hover {
+  color: var(--PrimaryColorDashboard);
+}
+.topSection .cardSection .leftCard .mainDashboard .textDashboardDiv .link:hover .icon-dashboard {
+  transform: translateX(10px);
+  transition: 0.3s ease;
+}
+.topSection .cardSection .leftCard .mainDashboard .imgDiv {
+  width: 150px;
+  height: 200px;
+  transform: translateX(20px);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.topSection .cardSection .leftCard .mainDashboard .imgDiv img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.topSection .cardSection .sideBarCard {
+  display: none;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+.topSection .cardSection .sideBarCard .icon-dashboard {
+  position: absolute;
+  background: var(--HoverCoverDashboard);
+  border: 10px solid var(--whiteColorDashboard);
+  font-size: 3rem;
+  border-radius: 50%;
+  top: -8px;
+  right: 50%;
+  transform: translate(50%);
+  z-index: 100;
+}
+.topSection .cardSection .sideBarCard .cardContent {
+  position: relative;
+  padding: 1rem;
+  background: var(--HoverCoverDashboard);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.topSection .cardSection .sideBarCard .cardContent h3 {
+  font-size: var(--h3FontSize);
+  margin-top: 1rem;
+  padding: 1rem 0;
+  font-weight: 800;
+  color: var(--blackColorDashboard);
+}
+.topSection .cardSection .sideBarCard .cardContent p {
+  font-size: var(--normalFontSize);
+  color: var(--textColorDashboard);
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+.topSection .cardSection .sideBarCard .cardContent .btn-dashboard {
+  position: relative;
+  color: var(--textColorDashboard);
+  z-index: 1000;
+  padding: 0.5rem;
+}
+.topSection .cardSection .sideBarCard .cardContent .circle1, .topSection .cardSection .sideBarCard .cardContent .circle2 {
+  position: absolute;
+  background: var(--paleGreenDashboard);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.topSection .cardSection .sideBarCard .cardContent .circle1 {
+  height: 100px;
+  width: 100px;
+  top: -50px;
+  left: -50px;
+}
+.topSection .cardSection .sideBarCard .cardContent .circle2 {
+  height: 150px;
+  width: 150px;
+  top: -80px;
+  right: -70px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 990px) {
+  .cardSection {
+    flex-direction: column;
+  }
+  .cardSection .rightCard, .cardSection .leftCard {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .cardSection .leftCard {
+    margin-top: 2rem;
+    align-self: flex-start;
+    height: 10px !important;
+  }
+  .cardSection .sideBarCard {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 725px) {
+  .cardSection .leftCard .mainDashboard {
+    width: 100%;
+  }
+  .cardSection .sideBarCard {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 535px) {
+  .headerSection .adminDiv {
+    display: none;
+  }
+  .headerSection .title-dashboard {
+    text-align: center;
+    margin: auto;
+  }
+  .cardSection .rightCard {
+    display: flex;
+    text-align: center;
+  }
+  .cardSection .rightCard .buttons {
+    margin: auto;
+    flex-direction: column;
+  }
+  .cardSection .rightCard .buttons .btn-dashboard {
+    width: 100%;
+  }
+  .cardSection .leftCard .mainDashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardSection .leftCard .mainDashboard .textDashboardDiv {
+    margin: auto;
+  }
+  .cardSection .leftCard .mainDashboard::before {
+    width: 100% !important;
+  }
+  .cardSection .leftCard .mainDashboard .imgDiv {
+    display: none;
+  }
+}
+@media screen and (max-width: 390px) {
+  .topSection .cardSection .rightCard {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .topSection .cardSection .rightCard h1 {
+    font-size: var(--h2FontSize);
+  }
+}/*# sourceMappingURL=topsection.css.map */

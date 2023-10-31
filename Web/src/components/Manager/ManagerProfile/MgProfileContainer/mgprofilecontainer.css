@@ -1,0 +1,119 @@
+:root {
+  --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+  --SecondaryColorManagerDashboard: hsl(217, 61%, 21%);
+  --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+  --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+  --blackColorManagerDashboard: hsl(0, 0%, 18%);
+  --textColorManagerDashboard: hsl(0, 0%, 83%);
+  --bgColorManagerDashboard: hsl(218, 24%, 61%);
+  --greyTextManagerDashboard: hsl(34, 4%, 39%);
+  --inputColorManagerDashboard: hsl(240, 12%, 97%);
+  --inputColorManagerDashboardRed: #d5d5d5;
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.MgProfileContainer {
+  height: 100vh;
+}
+.MgProfileContainer .MgUserListBodyRightPage {
+  height: 100vh;
+  background: var(--SecondaryColorManagerDashboard);
+  flex-basis: 100%;
+  flex-direction: column;
+  overflow: scroll;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent {
+  width: 100%;
+  height: 100vh;
+  padding: 4rem;
+  overflow: auto;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup {
+  width: 100%;
+  height: 100%;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection {
+  justify-content: space-between;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .ImgMgUserInfoContainer {
+  width: 250px;
+  height: 200px;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .ImgMgUserInfoContainer img {
+  width: 80%;
+  height: 84%;
+  border-radius: 50%;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .NameAndSelectMgUserListGroup {
+  height: auto;
+  flex-basis: 60%;
+  gap: 0.5rem;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .NameAndSelectMgUserListGroup h5 {
+  font-size: var(--h2FontSize);
+  color: var(--textColorManagerDashboard);
+  font-weight: 500;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .NameAndSelectMgUserListGroup h6 {
+  font-size: var(--h3FontSize);
+  color: rgb(243, 233, 50);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .editMgProfilebtn {
+  font-weight: 600;
+  flex-basis: 15%;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .editMgProfilebtn .btnMgProfile {
+  padding: 0.6rem 1.5rem;
+  background: var(--MainBtnManagerDashboard);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .editMgProfilebtn .btnMgProfile a {
+  color: var(--textColorManagerDashboard);
+  font-weight: 500;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .editMgProfilebtn .btnMgProfile:hover {
+  background: var(--HoverCoverManagerDashboard);
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .formMgGroup .headingMgProfileSection .editMgProfilebtn button {
+  color: var(--whiteColorDashboard);
+  font-size: var(--smallFontSize);
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile {
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile .bodyMgProfileSection {
+  width: 100%;
+  height: 100%;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile .bodyMgProfileSection .labelMgGp {
+  gap: 2rem;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile .bodyMgProfileSection .labelMgGp .labelMgItem {
+  border-bottom: 1px solid var(--greyTextDashboard);
+  gap: 8rem;
+  align-items: flex-start;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile .bodyMgProfileSection .labelMgGp .labelMgItem .spanMgItem {
+  width: 150px;
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile .bodyMgProfileSection .labelMgGp .labelMgItem .spanMgItem span {
+  font-weight: 600;
+  color: var(--textColorManagerDashboard);
+}
+.MgProfileContainer .MgUserListBodyRightPage .mainMgProfileContent .bottomMgProfile .bodyMgProfileSection .labelMgGp .labelMgItem .PagrarphMgItem p {
+  color: var(--textColorManagerDashboard);
+}/*# sourceMappingURL=mgprofilecontainer.css.map */
