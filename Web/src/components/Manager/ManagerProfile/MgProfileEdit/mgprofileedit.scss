@@ -1,0 +1,283 @@
+:root {
+    --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+    --SecondaryColorManagerDashboard: hsl(217, 61%, 21%);
+    --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+    --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+    --blackColorManagerDashboard: hsl(0, 0%, 18%);
+    --textColorManagerDashboard: hsl(0, 0%, 83%);
+    --bgColorManagerDashboard: hsl(218, 24%, 61%);
+    --greyTextManagerDashboard: hsl(34, 4%, 39%);
+    --inputColorManagerDashboard: hsl(240, 12%, 97%);
+    --inputColorManagerDashboardRed: #d5d5d5;
+
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+
+.MgEditMainContent{
+    width: 82%;
+    height: 100%;
+    padding: 2rem;
+    overflow: auto;
+
+    .MgEditFormTitle{
+        justify-content: center;
+
+        h1{
+            color: var(--greyTextManagerDashboard);
+        }
+    }
+
+    .MgEditFormContainer{
+        height: 500px;
+        margin-top: 2rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        
+        .MgEdit-form {
+            flex-basis: 60%;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .MgEditlabel-container{
+                gap: .5rem;
+
+                .MgEditLabelName{
+                    width: 100px;
+
+                    p{
+                        width: auto;
+                        color: var(--textColorManagerDashboard);
+                    }
+                }
+
+                .MgEditInput-profile{
+                    border: 1px solid var(--greyTextManagerDashboard);
+                    background: var(--PrimaryColorManagerDashboard);
+                    color: var(--textColorManagerDashboard);
+                    padding: .4rem;
+                    border-radius: 5px;
+                    width: 400px;
+                }
+
+            }
+
+            .MgEditlabel-container-img{
+                gap: .5rem;
+
+                .MgEditLabelName{
+                    width: 100px;
+
+                    p{
+                        width: auto;
+                        color: var(--textColorManagerDashboard);
+                    }
+
+
+                }
+
+                .MgEditInput-profile-img{
+                    border: hidden;
+                    background: none;
+                    padding: .4rem;
+                    width: 400px;
+                }
+
+                .img-and-button-remove{
+                    justify-content: space-between;
+                    gap: 20.1rem;
+
+                    .image-container{
+                        width: 50px;
+
+                        .profile-img{
+                            width:100%;
+                        }
+                    }
+
+                    .btn-mg-edit-info-image-container{
+
+                        .btn-mg-edit-info-image{
+                            border: none;
+                            background: none;
+                            outline: none;
+                            .icon-dashboard{
+                                font-size: var(--bigFontSize);
+                                color: rgb(149, 8, 8);
+                            }
+    
+                           
+                        }
+
+                        &:hover .btn-mg-edit-info-image{
+                            background: rgb(241, 103, 103);
+
+                            .icon-dashboard{
+                                color: var(--whiteColorDashboard);
+                            }
+                            
+                        }
+                        
+                    }
+                }
+
+            }
+
+            .button-update{
+                width: 60%;
+
+
+                .btn-mg-edit-info{
+                    padding: .8rem 10.5rem;
+                    border-radius: 5px;
+                    background-color: var(--MainBtnManagerDashboard);
+
+                    &:hover {
+                        background-color: var(--HoverCoverManagerDashboard);
+                    }
+
+                    .button-container-profile-edit{
+                        gap: 1rem;
+
+                        p{
+                            font-weight: 600;
+                            color: var(--textColorManagerDashboard);
+                        }
+
+                        .icon-dashboard{
+                            color: var(--textColorManagerDashboard) !important;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+//MEDIA QUERIES =============>
+@media screen and (max-width: 720px){
+
+    .MgEditMainContent{
+        .MgEditFormContainer{
+            .MgEdit-form {
+                gap: .6rem;
+                .button-update{
+                    width: 100%
+                }
+
+                .MgEditlabel-container{
+                    flex-direction: column;
+    
+                    .MgEditlabel-container{
+                        transform: translateX(-9rem);
+                    }
+                }
+    
+                .MgEditlabel-container-img{
+                    flex-direction: column;
+    
+                    .MgEditlabel-container{
+                        transform: translateX(-9rem);
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width:570px){
+    .MgEditMainContent{
+        .MgEditFormContainer{
+            .MgEdit-form {
+                align-items: start;
+                .MgEditlabel-container{
+
+                    .MgEditlabel-container{
+                        transform: translateX(-4.5rem);
+                    }
+
+                    .MgEditInput-profile{
+                        width: 250px;
+                    }
+                    
+                }
+
+                .MgEditlabel-container-img{
+
+                    .MgEditlabel-container{
+                        transform: translateX(-4.5rem);
+                    }
+
+                    .MgEditInput-profile-img{
+                        width: 250px;
+                    }
+
+                    .img-and-button-remove{
+                        gap: 10rem;
+
+                    }
+                }
+
+                .button-update{
+                    .btn-mg-edit-info{
+                        padding: .8rem 5.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:385px){
+    .MgEditMainContent{
+        .MgEditFormTitle{
+            h1{
+                font-size: var(--h1FontSize);
+            }
+        }
+
+        .MgEditFormContainer{
+            .MgEdit-form {
+                .MgEditlabel-container{
+                    .MgEditInput-profile{
+                        width: 200px;
+                    }
+                }
+
+                .MgEditlabel-container-img{
+                    .MgEditInput-profile{
+                        width: 200px;
+                    }
+
+                    .MgEditInput-profile-img{
+                        width: 200px;
+                    }
+
+                    .img-and-button-remove{
+                        gap: 7.5rem;
+                    }
+                }
+
+                .button-update{
+                    .btn-mg-edit-info{
+                        padding: .8rem 4.1rem;
+                    }
+                }
+            }
+        }
+    }
+}

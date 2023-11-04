@@ -109,7 +109,7 @@
   width: 70%;
   height: 7px;
   border-radius: 0px 0px 5px 5px;
-  background-color: rgb(31, 99, 31);
+  background-color: rgb(42, 133, 42);
 }
 .MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup:hover {
   transform: translateY(-0.8rem);
@@ -120,12 +120,14 @@
   grid-column: span 3;
   grid-row: span 3;
   background-color: var(--PrimaryColorManagerDashboard);
+  place-items: center;
 }
 .MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MailChartMgHomeGroup {
   width: 100%;
   height: 100%;
   grid-column: span 2;
   grid-row: span 3;
+  place-items: center;
   background-color: var(--PrimaryColorManagerDashboard);
 }
 .MgHomeBody .MgHomeBodyRightPage .FooterMgSecContainer {

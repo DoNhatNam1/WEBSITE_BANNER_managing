@@ -4,6 +4,8 @@ import './managerhome.css'
 import { Context } from '../../../context/Context'
 import ManagerSidebarListHeader from '../ManagerSidebarList/ManagerSidebarListHeader/ManagerSidebarListHeader'
 import TopManagerSection from '../TopManagerSection/TopManagerSection'
+import CardTbChart from './CardTbChart'
+import CardMailChart from './CardMailChart'
 import { PiSuitcaseSimpleBold } from 'react-icons/pi'
 import { SlWallet } from 'react-icons/sl'
 import { IoIosRadio } from 'react-icons/io'
@@ -147,8 +149,12 @@ const ManagerHome = () => {
                     <div className="MgProcessBarValue" />
                   </div>
                 </div>
-                <div className="TableChartMgHomeGroup">Card TbChart</div>
-                <div className="MailChartMgHomeGroup">Card MailChart</div>
+                <div className="TableChartMgHomeGroup grid">
+                  <CardTbChart />
+                  </div>
+                <div className="MailChartMgHomeGroup grid">
+                  <CardMailChart />
+                  </div>
               </div>
             </div>
 

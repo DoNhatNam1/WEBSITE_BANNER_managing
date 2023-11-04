@@ -64,7 +64,7 @@ const ProfileHeading = () => {
 
       <div className="edit-btn">
         <button className='btn'
-        onClick={(e) => handleUpdate(e, userData.idUser)}>Edit Profile</button>
+        onClick={(e) => handleUpdate(e, userId)}>Edit Profile</button>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import * as React from "react";
 import "./manageruserlist.css";
 import ManagerSidebarListHeader from "../ManagerSidebarList/ManagerSidebarListHeader/ManagerSidebarListHeader";
 import TopManagerSection from "../TopManagerSection/TopManagerSection";
-import UserListTableUI from "./UserListTablueUI";
+import UserListTableUI from "./UserListTableUI";
 import imgUserAvatar from "../../../assets/iconUserAvata.png";
 import backendinfouser from "../../../apis/UserDashboardAPI";
 import "react-toastify/dist/ReactToastify.css";

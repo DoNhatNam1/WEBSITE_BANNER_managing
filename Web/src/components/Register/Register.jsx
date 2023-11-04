@@ -31,8 +31,8 @@ const Register = () => {
   const fetchData = async () => {
     try {
       const response = await userAccountRegisterUrl.get("/")
-      console.log(response.data.datauseraccount);
-      setUserAccounts(response.data.datauseraccount.useraccounts);
+      console.log(response.data.dataaccount);
+      setUserAccounts(response.data.dataaccount.accounts);
       setHasFetched(true);
     } catch (err) {
       console.log(err);
@@ -75,7 +75,8 @@ const Register = () => {
         });
        }, 1000);
        navigateTo('/register')
-    } else if(userAccounts.some(account => account.UserName === userName)) {
+       
+    } else if(userAccounts.some(account => bcrypt.compareSync(userName, account.AccountName))) {
       setTimeout(() => {
         toast.error('Tên đăng nhập đã được sử dụng. Vui lòng chọn tên đăng nhập khác!', {
           position: "bottom-right",

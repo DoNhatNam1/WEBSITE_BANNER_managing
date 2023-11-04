@@ -1,1 +1,231 @@
+.frame {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame .div {
+  background-color: #ffffff;
+  height: 3865px;
+  position: relative;
+  width: 1496px;
+}
+
+.frame .rectangle {
+  background-color: #3bff1b;
+  height: 76px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1496px;
+  place-items: end;
+}
+
+.frame .rectangle .btn {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+
+.frame .rectangle .icon-dashboard {
+  font-size: var(--biggestFontSize);
+  background: var(--whiteColorDashboard);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 4px var(--inputColorDashboard);
+  color: var(--textColorDashboard);
+}
+
+.frame .rectangle .adminImage {
+  border: 3px solid var(--whiteColorDashboard);
+  border-radius: 10px;
+  width: 2.5rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  box-shadow: 0 2px 4px var(--inputColorDashboard);
+}
+
+.frame .rectangle .adminImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.frame .rectangle-2 {
+  background-color: #3bff1b;
+  height: 400px;
+  left: 0;
+  position: absolute;
+  top: 3465px;
+  width: 1496px;
+}
+
+.frame .rectangle-3 {
+  background-color: #fd4545;
+  height: 540px;
+  left: 0;
+  position: absolute;
+  top: 76px;
+  width: 1496px;
+}
+
+.frame .rectangle-4 {
+  background-color: #fd4545;
+  height: 540px;
+  left: 100px;
+  position: absolute;
+  top: 2727px;
+  width: 1186px;
+}
+
+.frame .rectangle-5 {
+  background-color: #fd4545;
+  height: 540px;
+  left: 100px;
+  position: absolute;
+  top: 1325px;
+  width: 636px;
+}
+
+.frame .text-wrapper {
+  color: var(--variable-collection-textcolorforweb);
+  font-family: var(--popins-semibold-h5-font-family);
+  font-size: var(--popins-semibold-h5-font-size);
+  font-style: var(--popins-semibold-h5-font-style);
+  font-weight: var(--popins-semibold-h5-font-weight);
+  height: 70px;
+  left: 100px;
+  letter-spacing: var(--popins-semibold-h5-letter-spacing);
+  line-height: var(--popins-semibold-h5-line-height);
+  position: absolute;
+  top: 711px;
+  width: 280px;
+}
+
+.frame .text-wrapper-2 {
+  color: var(--variable-collection-textcolorforweb);
+  font-family: var(--popins-semibold-h5-font-family);
+  font-size: var(--popins-semibold-h5-font-size);
+  font-style: var(--popins-semibold-h5-font-style);
+  font-weight: var(--popins-semibold-h5-font-weight);
+  height: 70px;
+  left: 100px;
+  letter-spacing: var(--popins-semibold-h5-letter-spacing);
+  line-height: var(--popins-semibold-h5-line-height);
+  position: absolute;
+  top: 2007px;
+  width: 280px;
+}
+
+.frame .rectangle-6 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 100px;
+  position: absolute;
+  top: 837px;
+  width: 308px;
+}
+
+.frame .rectangle-7 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 100px;
+  position: absolute;
+  top: 2133px;
+  width: 308px;
+}
+
+.frame .rectangle-8 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 430px;
+  position: absolute;
+  top: 837px;
+  width: 308px;
+}
+
+.frame .rectangle-9 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 430px;
+  position: absolute;
+  top: 2133px;
+  width: 308px;
+}
+
+.frame .rectangle-10 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 760px;
+  position: absolute;
+  top: 837px;
+  width: 308px;
+}
+
+.frame .rectangle-11 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 760px;
+  position: absolute;
+  top: 2133px;
+  width: 308px;
+}
+
+.frame .rectangle-12 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 1090px;
+  position: absolute;
+  top: 837px;
+  width: 308px;
+}
+
+.frame .rectangle-13 {
+  background-color: #d9d9d9;
+  height: 345px;
+  left: 1090px;
+  position: absolute;
+  top: 2133px;
+  width: 308px;
+}
+
+.frame .rectangle-14 {
+  background-color: #d9d9d9;
+  height: 164px;
+  left: 870px;
+  position: absolute;
+  top: 1325px;
+  width: 110px;
+}
+
+.frame .rectangle-15 {
+  background-color: #d9d9d9;
+  height: 164px;
+  left: 1090px;
+  position: absolute;
+  top: 1325px;
+  width: 110px;
+}
+
+.frame .rectangle-16 {
+  background-color: #d9d9d9;
+  height: 164px;
+  left: 1090px;
+  position: absolute;
+  top: 1595px;
+  width: 110px;
+}
+
+.frame .rectangle-17 {
+  background-color: #d9d9d9;
+  height: 164px;
+  left: 870px;
+  position: absolute;
+  top: 1595px;
+  width: 110px;
+}
+
 /*# sourceMappingURL=clienthomepage.css.map */

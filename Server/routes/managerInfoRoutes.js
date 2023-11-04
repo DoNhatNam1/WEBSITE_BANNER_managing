@@ -9,6 +9,7 @@ const { getAManagerInfo,
     } = userInfoController;
 
 router.get('/:managerId/profile/info', getAManagerInfo);
+router.get('/:managerId/profile/edit', getAManagerInfo);
 router.put('/:managerId/profile/edit', updateManagerInfo);
 
 

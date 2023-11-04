@@ -1,1 +1,189 @@
-/*# sourceMappingURL=mgprofileedit.css.map */
+:root {
+  --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+  --SecondaryColorManagerDashboard: hsl(217, 61%, 21%);
+  --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+  --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+  --blackColorManagerDashboard: hsl(0, 0%, 18%);
+  --textColorManagerDashboard: hsl(0, 0%, 83%);
+  --bgColorManagerDashboard: hsl(218, 24%, 61%);
+  --greyTextManagerDashboard: hsl(34, 4%, 39%);
+  --inputColorManagerDashboard: hsl(240, 12%, 97%);
+  --inputColorManagerDashboardRed: #d5d5d5;
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.MgEditMainContent {
+  width: 82%;
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+.MgEditMainContent .MgEditFormTitle {
+  justify-content: center;
+}
+.MgEditMainContent .MgEditFormTitle h1 {
+  color: var(--greyTextManagerDashboard);
+}
+.MgEditMainContent .MgEditFormContainer {
+  height: 500px;
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form {
+  flex-basis: 60%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container {
+  gap: 0.5rem;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditLabelName {
+  width: 100px;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditLabelName p {
+  width: auto;
+  color: var(--textColorManagerDashboard);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditInput-profile {
+  border: 1px solid var(--greyTextManagerDashboard);
+  background: var(--PrimaryColorManagerDashboard);
+  color: var(--textColorManagerDashboard);
+  padding: 0.4rem;
+  border-radius: 5px;
+  width: 400px;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img {
+  gap: 0.5rem;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditLabelName {
+  width: 100px;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditLabelName p {
+  width: auto;
+  color: var(--textColorManagerDashboard);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditInput-profile-img {
+  border: hidden;
+  background: none;
+  padding: 0.4rem;
+  width: 400px;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove {
+  justify-content: space-between;
+  gap: 20.1rem;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove .image-container {
+  width: 50px;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove .image-container .profile-img {
+  width: 100%;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove .btn-mg-edit-info-image-container .btn-mg-edit-info-image {
+  border: none;
+  background: none;
+  outline: none;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove .btn-mg-edit-info-image-container .btn-mg-edit-info-image .icon-dashboard {
+  font-size: var(--bigFontSize);
+  color: rgb(149, 8, 8);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove .btn-mg-edit-info-image-container:hover .btn-mg-edit-info-image {
+  background: rgb(241, 103, 103);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove .btn-mg-edit-info-image-container:hover .btn-mg-edit-info-image .icon-dashboard {
+  color: var(--whiteColorDashboard);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update {
+  width: 60%;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info {
+  padding: 0.8rem 10.5rem;
+  border-radius: 5px;
+  background-color: var(--MainBtnManagerDashboard);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info:hover {
+  background-color: var(--HoverCoverManagerDashboard);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info .button-container-profile-edit {
+  gap: 1rem;
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info .button-container-profile-edit p {
+  font-weight: 600;
+  color: var(--textColorManagerDashboard);
+}
+.MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info .button-container-profile-edit .icon-dashboard {
+  color: var(--textColorManagerDashboard) !important;
+}
+
+@media screen and (max-width: 720px) {
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form {
+    gap: 0.6rem;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update {
+    width: 100%;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container {
+    flex-direction: column;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditlabel-container {
+    transform: translateX(-9rem);
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img {
+    flex-direction: column;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditlabel-container {
+    transform: translateX(-9rem);
+  }
+}
+@media screen and (max-width: 570px) {
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form {
+    align-items: start;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditlabel-container {
+    transform: translateX(-4.5rem);
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditInput-profile {
+    width: 250px;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditlabel-container {
+    transform: translateX(-4.5rem);
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditInput-profile-img {
+    width: 250px;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove {
+    gap: 10rem;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info {
+    padding: 0.8rem 5.7rem;
+  }
+}
+@media screen and (max-width: 385px) {
+  .MgEditMainContent .MgEditFormTitle h1 {
+    font-size: var(--h1FontSize);
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container .MgEditInput-profile {
+    width: 200px;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditInput-profile {
+    width: 200px;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .MgEditInput-profile-img {
+    width: 200px;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .MgEditlabel-container-img .img-and-button-remove {
+    gap: 7.5rem;
+  }
+  .MgEditMainContent .MgEditFormContainer .MgEdit-form .button-update .btn-mg-edit-info {
+    padding: 0.8rem 4.1rem;
+  }
+}/*# sourceMappingURL=mgprofileedit.css.map */

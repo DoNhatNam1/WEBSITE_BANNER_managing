@@ -28,7 +28,9 @@ import UserChangePasswordContainer from './components/Client/UserDashboard/UserD
 import ManagerHome from "./components/Manager/ManagerHome/ManagerHome";
 import ManagerUserList from "./components/Manager/ManagerUser/ManagerUserList";
 import MgProfileContainer from './components/Manager/ManagerProfile/MgProfileContainer/MgProfileContainer'
-
+import ManagerChangepassword from './components/Manager/ManagerChangepassword/ManagerChangepassword'
+import ManagerBannerList from './components/Manager/ManagerBanner/ManagerBannerList/ManagerBannerList'
+import ManagerCampaignList from './components/Manager/ManagerCampaign/ManagerCampaignList/ManagerCampaignList'
 
 const App = () => {
   const hours = 4;
@@ -46,7 +48,7 @@ const App = () => {
   const routeConfig = [
     {
       path: "/",
-      element: <AdminBannerList />,
+      element: <ClientHomePage />,
     },
 
     {
@@ -168,6 +170,21 @@ const App = () => {
     {
       path: "/managerdashboard/:managerId/userlist",
       element: <ManagerUserList />,
+    },
+
+    {
+      path: "/managerdashboard/:managerId/changepassword",
+      element: <ManagerChangepassword />,
+    },
+
+    {
+      path: "/managerdashboard/:managerId/bannerlist",
+      element: <ManagerBannerList />,
+    },
+
+    {
+      path: "/managerdashboard/:managerId/campaignlist",
+      element: <ManagerCampaignList />,
     },
 
   ];
