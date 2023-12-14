@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './userdashboard.css'
 import { Context } from '../../../../context/Context'
 import UserAccountMainDashBoardUrl from '../../../../apis/UserDashboardAPI'
+import backendallclicklogapi from "../../../../apis/ClientHomePageClickLog";
 import {useParams, useNavigate } from 'react-router-dom'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
@@ -17,36 +18,69 @@ import BodySection from './BodySectionMainDashboard/BodySection';
       userData, 
       logout, 
       dashboardShowNLoginSuccess,
-      // dashboardShowSendingDelMessInOneDay,
-      // dashboardShowSendingDelMessSucss,
-      // dashboardShowSendingDelMessFail,
-      // setDashboardShowSendingDelMessSucss, 
       setDashboardShowLoginSuccess, 
-      // setDashboardShowSendingDelMessFail,
-      // setDashboardShowSendingDelMessInOneDay,
       dashboardShowChangePassSuccess, 
       closePopupUserDashboard, 
       isOpenPopupRequestUserDashboard, 
-      // addUserAccountsSendingDelMess 
+      bannerData,
+      secondBannerClickLogs,
+      currentTimeBannerClickLog,
+      setSecondBannerClickLogs,
+      setCurrentTimeBannerClickLog,
+      setBannerData,
     } = useContext(Context); 
-    const { userId } = useParams();
+    // const { userId } = useParams();
     
-    const [inputValuePopupUserDashboard, setInputValuePopupUserDashboard] = useState('');
-    const [Timing, setTiming] = useState('');
-    const [hasFetched, setHasFetched] = useState(false);
+    // const [inputValuePopupUserDashboard, setInputValuePopupUserDashboard] = useState('');
+    // const [Timing, setTiming] = useState('');
+    // const [hasFetched, setHasFetched] = useState(false);
+
+ 
 
       const navigateTo = useNavigate()
 
-
-
+      let checkSecure = false;
           useEffect(() => {
-            console.log(userData);
-            console.log(isLoggedInUser);
-             if (!isLoggedInUser && userData === null){
-               logout();
-               navigateTo('/login');
+            if(!checkSecure){
+              checkSecure = true;
+              console.log(userData);
+              console.log(isLoggedInUser);
+               if (!isLoggedInUser && userData === null){
+                 logout();
+                 navigateTo('/login');
+              }
             }
           }, [isLoggedInUser, userData, navigateTo]);
+
+          let bannerEventFetch = false;
+            useEffect(() => {
+              if(!bannerEventFetch){
+                bannerEventFetch = true;
+                const IntBannerData = parseInt(bannerData)
+                if(secondBannerClickLogs !== 0 && userData !== null){
+                  backendallclicklogapi.post('/created', {
+                    UserAccount_id: userData.idUser,
+                    ThoiGianChuyenDoi: secondBannerClickLogs,
+                    banner_id: IntBannerData,
+                    ClickHistory: currentTimeBannerClickLog,
+                  })
+                        .then((response) => {
+                        console.log(response.data.dataclicklog);
+                        setTimeout(() => {
+                        localStorage.removeItem(`totalSecondsBannerClickLog${bannerData}`);
+                        localStorage.removeItem(`dateBannerClickLog${bannerData}`);
+                        localStorage.removeItem('bannerData');
+                        setSecondBannerClickLogs(0)
+                        setCurrentTimeBannerClickLog('')
+                        setBannerData()
+                      }, 4000);
+                        })
+                        .catch((err) => {
+                          console.log(err);
+                        });
+              }
+              }
+          }, []);
 
           // useEffect(() => {
           //   if(dashboardShowSendingDelMessSucss === true){
@@ -99,37 +133,45 @@ import BodySection from './BodySectionMainDashboard/BodySection';
           //   }
           // }, [dashboardShowSendingDelMessInOneDay])
 
+          let loginFetch = false
           useEffect(() => {
-            if(dashboardShowNLoginSuccess === true){
-              setDashboardShowLoginSuccess(false);
-                toast.success('Login successful!', {
-                  position: "bottom-right",
-                  autoClose: 4000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "colored",
-                });
-              
+            if(!loginFetch){
+              loginFetch = true;
+              if(dashboardShowNLoginSuccess === true){
+                setDashboardShowLoginSuccess(false);
+                  toast.success('Login successful!', {
+                    position: "bottom-right",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                  });
+                
+              }
             }
+
           }, [dashboardShowNLoginSuccess])
 
+          let changePassFetch = false
           useEffect(() => {
-            if(dashboardShowChangePassSuccess === true){
-              setDashboardShowLoginSuccess(false);
-                toast.success('Changed password successful!', {
-                  position: "bottom-right",
-                  autoClose: 4000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "colored",
-                });
-              
+            if(!changePassFetch) {
+              changePassFetch = true;
+              if(dashboardShowChangePassSuccess === true){
+                setDashboardShowLoginSuccess(false);
+                  toast.success('Changed password successful!', {
+                    position: "bottom-right",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                  });  
+              }
             }
           }, [dashboardShowChangePassSuccess])
 

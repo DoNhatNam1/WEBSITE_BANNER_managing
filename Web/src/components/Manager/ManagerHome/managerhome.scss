@@ -86,7 +86,7 @@
                             }
                         }
 
-                        .MgCardLastMonth{
+                        .MgCardLastMonthSuccess{
                             grid-column: span 3;
 
                             p{
@@ -98,6 +98,31 @@
                                     font-size: var(--smallestFontSize);
                                     color: rgba(54, 103, 48, 0.912);
                                     background: rgba(193, 235, 188, 0.912);
+                                    border-radius: 5px;
+                                    margin-right: 5px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+
+                                    .MgArrowIcon{
+                                        font-size: var(--normalFontSize);
+                                        transform: translate(-.3rem, .15rem);
+                                    }
+                                }
+                            }
+                        }
+
+                        .MgCardLastMonthFail{
+                            grid-column: span 3;
+
+                            p{
+                                font-size: var(--normalFontSize);
+                                color: var(--bgColorManagerDashboard);
+
+                                span{
+                                    width: 58px;
+                                    font-size: var(--smallestFontSize);
+                                    color: rgba(192, 13, 13, 0.912);
+                                    background: rgba(233, 155, 155, 0.912);
                                     border-radius: 5px;
                                     margin-right: 5px;
                                     padding-left: 10px;

@@ -78,14 +78,14 @@
   height: 22px;
   fill: var(--MainBtnManagerDashboard);
 }
-.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonth {
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthSuccess {
   grid-column: span 3;
 }
-.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonth p {
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthSuccess p {
   font-size: var(--normalFontSize);
   color: var(--bgColorManagerDashboard);
 }
-.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonth p span {
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthSuccess p span {
   width: 58px;
   font-size: var(--smallestFontSize);
   color: rgba(54, 103, 48, 0.912);
@@ -95,7 +95,28 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonth p span .MgArrowIcon {
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthSuccess p span .MgArrowIcon {
+  font-size: var(--normalFontSize);
+  transform: translate(-0.3rem, 0.15rem);
+}
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthFail {
+  grid-column: span 3;
+}
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthFail p {
+  font-size: var(--normalFontSize);
+  color: var(--bgColorManagerDashboard);
+}
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthFail p span {
+  width: 58px;
+  font-size: var(--smallestFontSize);
+  color: rgba(192, 13, 13, 0.912);
+  background: rgba(233, 155, 155, 0.912);
+  border-radius: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.MgHomeBody .MgHomeBodyRightPage .BodyMgSecContainer .BodyMgDivContainer .MgCardGroup .MgCardBody .MgCardLastMonthFail p span .MgArrowIcon {
   font-size: var(--normalFontSize);
   transform: translate(-0.3rem, 0.15rem);
 }

@@ -1,210 +1,185 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
+import * as React from "react";
+import {useParams, useNavigate } from 'react-router-dom'
+import backendallbannerapi from '../../../../apis/ManagerDashboardAPI'
+import EditIcon from "@mui/icons-material/Edit";
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/DeleteOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import CancelIcon from '@mui/icons-material/Close';
-import InfoIcon from '@mui/icons-material/Info';
+import DeleteIcon from "@mui/icons-material/DeleteOutlined";
+import {Box} from "@mui/material";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import bcrypt from 'bcryptjs';
+import { v4 } from "uuid";
+import { Context } from '../../../../context/Context'
 import {
-  GridRowModes,
   DataGrid,
   GridToolbarContainer,
   GridActionsCellItem,
-  GridRowEditStopReasons,
-} from '@mui/x-data-grid';
-import {
-  randomCreatedDate,
-  randomTraderName,
-  randomId,
-  randomArrayItem,
-} from '@mui/x-data-grid-generator';
+} from "@mui/x-data-grid";
 
-const roles = ['Market', 'Finance', 'Development'];
-const randomRole = () => {
-  return randomArrayItem(roles);
-};
+function EditToolbar() {
+  const { managerId } = useParams();
+    const { 
+    setIsOpenPopupBannerAddInMgDashboard,
+} = React.useContext(Context); 
 
-const initialRows = [
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 25,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 36,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 19,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 28,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 23,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-];
 
-function EditToolbar(props) {
-  const { setRows, setRowModesModel } = props;
-
-  const handleClick = () => {
-    const id = randomId();
-    setRows((oldRows) => [...oldRows, { id, name: '', age: '', isNew: true }]);
-    setRowModesModel((oldModel) => ({
-      ...oldModel,
-      [id]: { mode: GridRowModes.Edit, fieldToFocus: 'name' },
-    }));
+  const handleClick = (e) => {
+    e.stopPropagation();
+    setIsOpenPopupBannerAddInMgDashboard(true);
   };
 
   return (
     <GridToolbarContainer>
       <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
-        Add record
+        Add Banner
       </Button>
     </GridToolbarContainer>
   );
 }
 
 export default function ManagerBannerListTableUI() {
-  const [rows, setRows] = React.useState(initialRows);
   const [rowModesModel, setRowModesModel] = React.useState({});
+  const { managerId } = useParams();
+    const {
+    bannerRows, 
+    setBannerRows,
+    setIsOpenPopupBannerEditInMgDashboard,
+    setBannerIdShowInfoInMgDashData,
+    isOpenPopupBannerEditInMgDashboard,
+    isOpenPopupBannerAddInMgDashboard,
+    reLoadBannerEditPage,
+    reLoadBannerAddPage,
+} = React.useContext(Context); 
+  const navigateTo = useNavigate()
 
-  const handleRowEditStop = (params, event) => {
-    if (params.reason === GridRowEditStopReasons.rowFocusOut) {
-      event.defaultMuiPrevented = true;
+  let handleEventFectchUIList = false
+  React.useEffect(() => {
+    if(!handleEventFectchUIList){
+      handleEventFectchUIList = true
+      const fetchDataBanner = async () => {
+        try {
+          const responseauseraccount = await backendallbannerapi.get(`/${managerId}/bannerlist`)
+          console.log(responseauseraccount.data.databanners);
+          setBannerRows(responseauseraccount.data.databanners.banners);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      fetchDataBanner();
     }
-  };
 
-  const handleEditClick = (id) => () => {
-    setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
-  };
+  }, [isOpenPopupBannerEditInMgDashboard, isOpenPopupBannerAddInMgDashboard, reLoadBannerEditPage, reLoadBannerAddPage]);
 
-  const handleSaveClick = (id) => () => {
-    setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
-  };
 
-  const handleDeleteClick = (id) => () => {
-    setRows(rows.filter((row) => row.id !== id));
-  };
 
-  const handleCancelClick = (id) => () => {
-    setRowModesModel({
-      ...rowModesModel,
-      [id]: { mode: GridRowModes.View, ignoreModifications: true },
-    });
 
-    const editedRow = rows.find((row) => row.id === id);
-    if (editedRow.isNew) {
-      setRows(rows.filter((row) => row.id !== id));
+  const handleEditClick = (e, idBanner) => {
+      e.stopPropagation();  
+      setBannerIdShowInfoInMgDashData(idBanner);
+      setIsOpenPopupBannerEditInMgDashboard(true);
+
     }
+   
+
+  const handleDeleteClick = (bannerId) => () => {
+    try {
+      const response = backendallbannerapi.delete(`/${managerId}/bannerlist/${bannerId}/delete`);
+      setBannerRows(
+        bannerRows.filter((row) => {
+          return row.banner_id !== bannerId;
+        })
+      );
+    } catch (err) {
+      console.log(err);
+    }
+
+    setTimeout(() => {
+      toast.success('Deleted Banner Successfull!', {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+     }, 1000);
+    navigateTo(`/managerdashboard/${managerId}/bannerlist`);
   };
 
-  const processRowUpdate = (newRow) => {
-    const updatedRow = { ...newRow, isNew: false };
-    setRows(rows.map((row) => (row.id === newRow.id ? updatedRow : row)));
-    return updatedRow;
-  };
+
 
   const handleRowModesModelChange = (newRowModesModel) => {
     setRowModesModel(newRowModesModel);
   };
 
   const columns = [
-    { field: 'name', 
-    headerName: 'Name', 
-    width: 180, 
-    editable: true },
     {
-      field: 'age',
-      headerName: 'Age',
-      type: 'number',
-      width: 80,
-      align: 'left',
-      headerAlign: 'left',
-      editable: true,
-    },
-    {
-      field: 'joinDate',
-      headerName: 'Join date',
-      type: 'date',
-      width: 180,
-      editable: true,
-    },
-    {
-      field: 'role',
-      headerName: 'Department',
-      width: 220,
-      editable: true,
-      type: 'singleSelect',
-      valueOptions: ['Market', 'Finance', 'Development'],
-    },
-    {
-      field: 'actions',
-      type: 'actions',
-      headerName: 'Actions',
-      width: 100,
-      cellClassName: 'actions',
-      getActions: ({ id }) => {
-        const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
+      field: "ImgLinking",
+      headerName: "Ảnh",
+      type: 'image',
+      headerAlign: "center",
+      align: "center",
 
-        if (isInEditMode) {
-          return [
-            <GridActionsCellItem
-              icon={<SaveIcon />}
-              label="Save"
-              sx={{
-                color: 'primary.main',
-              }}
-              onClick={handleSaveClick(id)}
-            />,
-            <GridActionsCellItem
-              icon={<CancelIcon />}
-              label="Cancel"
-              className="textPrimary"
-              onClick={handleCancelClick(id)}
-              color="inherit"
-            />,
-          ];
+      width: 120,
+      renderCell: (params) =><img className='img' src={params.value} />,
+    },
+    {
+      field: "BannerName",
+      headerName: "Tên Banner",
+      headerAlign: "left",
+      width: 280,
+    },
+    {
+      field: "BannerSizeName",
+      headerName: "kích thước Banner",
+      width: 280,
+      align: "left",
+      headerAlign: "left",
+    },
+    {
+      field: "StatusBanner",
+      headerName: "Trạng thái Banner",
+      headerAlign: "center",
+      align: "center",
+      width: 160,
+
+      renderCell: params => {
+        if (params.row.StatusBanner === 'On Process') {
+          return <div className="StatusOff grid">{params.row.StatusBanner}</div>;
         }
+        return <div className="StatusOn grid">{params.row.StatusBanner}</div>;
+      }
+    },
+    {
+      field: "position",
+      headerName: "Vị trí hiển thị",
+      headerAlign: "center",
+      align: "center",
+      width: 150,
+    },
+    {
+      field: "actions",
+      type: "actions",
+      headerName: "Actions",
+      width: 100,
+      cellClassName: "actions",
+      getActions: ({ id }) => {
 
         return [
           <GridActionsCellItem
             icon={<EditIcon />}
             label="Edit"
-            className="textPrimary"
-            onClick={handleEditClick(id)}
+            className="EditBtn"
+            onClick={(e) => handleEditClick(e, id)}
             color="inherit"
           />,
           <GridActionsCellItem
-          icon={<InfoIcon />}
-          label="Info"
-          className="textPrimary"
-          // onClick={handleDetailClick(id)}
-          color="inherit"
-        />,
-          <GridActionsCellItem
             icon={<DeleteIcon />}
             label="Delete"
+            className="DelBtn"
             onClick={handleDeleteClick(id)}
             color="inherit"
           />,
@@ -214,38 +189,81 @@ export default function ManagerBannerListTableUI() {
   ];
 
   return (
-    <Box
+    <>
+        <Box
       sx={{
         height: 500,
-        width: '90%',
-        position: 'relative',
-        top: '30px',
+        width: "90%",
+        position: "relative",
+        top: "30px",
         boxShadow: 2,
         border: 2,
         borderColor: "primary.light",
-        '& .actions': {
-          color: 'text.secondary',
+        "& .DelBtn": {
+          color: "#5a0707",
         },
-        '& .textPrimary': {
-          color: 'text.primary',
+        "& .EditBtn": {
+          color: "#005810",
         },
-      }}
-    >
+        "& .StatusOn": {
+          border: 1,
+          borderRadius: 4,
+          borderColor: "rgb(22, 182, 22)",
+          color: "rgb(22, 182, 22)",
+          width: 120,
+          height: 40,
+          placeItems: 'center',
+        },
+        "& .StatusOff": {
+          border: 1,
+          borderRadius: 4,
+          borderColor: "rgb(246, 177, 49)",
+          color: "rgb(246, 177, 49)",
+          width: 120,
+          height: 40,
+          placeItems: 'center',
+        },
+
+        "& .img": {
+          padding: 1,
+          width: 60,
+          height: 60,
+          borderRadius: '50%',
+        }
+      }}>
       <DataGrid
-        rows={rows}
+        getRowId={(rows) => rows.banner_id}
+        rows={bannerRows}
         columns={columns}
         editMode="row"
         rowModesModel={rowModesModel}
         onRowModesModelChange={handleRowModesModelChange}
-        onRowEditStop={handleRowEditStop}
-        processRowUpdate={processRowUpdate}
+        sx={{ 
+          color: "#d5d5d5",
+          "& p": {
+            color: "#d5d5d5",
+          },
+
+          "& .MuiSelect-select": {
+            color: "#d5d5d5",
+          },
+          "& .MuiToolbar-root svg": {
+            color: "#d5d5d5",
+          },
+          "& .MuiDataGrid-columnHeaders svg": {
+            color: "#d5d5d5",
+          },
+        }}
         slots={{
           toolbar: EditToolbar,
         }}
         slotProps={{
-          toolbar: { setRows, setRowModesModel },
+          toolbar: { setBannerRows, setRowModesModel },
         }}
       />
     </Box>
+    <ToastContainer />
+    </>
+
   );
 }

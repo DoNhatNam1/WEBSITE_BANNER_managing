@@ -7,7 +7,7 @@ import ClientHomePage from './components/Client/ClientHome/ClientHomePage';
 // import AdminAddBannerSize from './components/Admin/AdminBanner/AdminAddBannerSize/AdminAddBannerSize';
 // import AdminCampaignList from './components/Admin/AdminCampaign/AdminCampaignList/AdminCampaignList';
 // import AdminUserList from './components/Admin/AdminUser/AdminUserList/AdminUserList';
-import AdminBannerList from './components/Admin/AdminBanner/AdminBannerList/AdminBannerList';
+// import AdminBannerList from './components/Admin/AdminBanner/AdminBannerList/AdminBannerList';
 // import AdminManagerList from './components/Admin/AdminManager/AdminManagerList/AdminManagerList';
 // import AdminAddBanner from './components/Admin/AdminBanner/AdminAddBanner/AdminAddBanner';
 // import AdminAddCampaign from './components/Admin/AdminCampaign/AdminAddCampaign/AdminAddCampaign';
@@ -31,6 +31,9 @@ import MgProfileContainer from './components/Manager/ManagerProfile/MgProfileCon
 import ManagerChangepassword from './components/Manager/ManagerChangepassword/ManagerChangepassword'
 import ManagerBannerList from './components/Manager/ManagerBanner/ManagerBannerList/ManagerBannerList'
 import ManagerCampaignList from './components/Manager/ManagerCampaign/ManagerCampaignList/ManagerCampaignList'
+import ClientTopBanner from './components/Client/ClientBanner/ClientTopBanner/ClientTopBanner'
+import ClientBodyBannerAt1 from './components/Client/ClientBanner/ClientBodyBanners/ClientBodyBannerAt1/ClientBodyBannerAt1'
+import ClientBodyBannerAt2 from './components/Client/ClientBanner/ClientBodyBanners/ClientBodyBannerAt2/ClientBodyBannerAt2'
 
 const App = () => {
   const hours = 4;
@@ -49,6 +52,21 @@ const App = () => {
     {
       path: "/",
       element: <ClientHomePage />,
+    },
+
+    {
+      path: "/:bannerId/bannerbelownavbar",
+      element: <ClientTopBanner />,
+    },
+
+    {
+      path: "/:bannerId/bannerbody1",
+      element: <ClientBodyBannerAt1 />,
+    },
+
+    {
+      path: "/:bannerId/bannerbody2",
+      element: <ClientBodyBannerAt2 />,
     },
 
     {

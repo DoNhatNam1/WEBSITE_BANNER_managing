@@ -1,0 +1,359 @@
+
+
+
+Insert into dbo.PHONGBAN(TENPHG, MAPHG) values
+('Nghien cuu', 5),
+('Dieu Hanh', 4),
+('Quan Ly', 1)
+
+Insert into dbo.DEAN(MADA, TENDA, DDIEM_DA, PHONG) values
+(1, 'San Pham X', 'Vung Tau', 5),
+(2, 'San Pham Y', 'Nha Trang', 5),
+(3, 'San Pham Z', 'TP HCM', 5),
+(10, 'Tin hoc hoa', 'Ha Noi', 4),
+(20, 'Cap quang', 'TP HCM', 1),
+(30, 'Dao tao', 'Ha Noi', 4)
+
+
+Insert into dbo.NHANVIEN(HONV, TENLOT, TENNV, MANV, DCHI, PHAI, LUONG, MA_NQL, PHG) values
+('Dinh', 'Ba', 'Tien', '009', '119 Cong Quynh, Tp HCM', 'Nam', 30000, '005', 5),
+('Nguyen', 'Thanh', 'Tung', '005', '222 Nguyen Van Cu, Tp HCM', 'Nam', 40000, '006', 5),
+('Bui', 'Ngoc', 'Hang', '007', '332 Nguyen Thai Hoc, Tp HCM', 'Nam', 25000, '001', 4),
+('Le', 'Quynh', 'Nhu', '001', '291 Ho Van Hue, Tp HCM', 'Nu', 43000, '006', 4),
+('Nguyen', 'Manh', 'Hung', '004', '95 Ba Ria, Vung Tau', 'Nam', 38000, '005', 5),
+('Tran', 'Thanh', 'Tam', '003', '34 Mai Thi Lu, Tp HCM', 'Nam', 25000, '005', 5),
+('Tran', 'Hong', 'Quang', '008', '80 Le Hong Phong, Tp HCM', 'Nam', 25000, '001', 4),
+('Pham', 'Van', 'Vinh', '006', '45 Trung Vuong, Ha Noi', 'Nu', 55000, '005', 1)
+
+
+
+
+Insert into dbo.THANHNHAN(MA_NVIEN, TENTN, PHAI, QUANHE) values
+('005', 'Trinh', 'Nu', 'Con gai'),
+('005', 'Khang', 'Nam', 'Con trai'),
+('005', 'Phuong', 'Nu', 'Vo chong'),
+('001', 'Minh', 'Nam', 'Vo chuong'),
+('009', 'Tien', 'Nam', 'Con trai'),
+('009', 'Chau', 'Nu', 'Con gai'),
+('009', 'Phuong', 'Nu', 'Vo chong')
+
+Insert into dbo.CONGVIEC(MADA, STT, TEN_CONG_VIEC) values
+(1, 1, 'Thiet ke san pham X'),
+(1, 2, 'Thu nghiem san pham X'),
+(2, 1, 'San xuat san pham Y'),
+(2, 2, 'Quang cao san pham Y'),
+(3, 1, 'Khuyen mai san pham Z'),
+(10, 1, 'Tin hoc hoa phong nhan su'),
+(10, 2, 'Tin hoc hoa phong kinh doanh'),
+(20, 1, 'Lap dat cap quang'),
+(30, 1, 'Dao tao nhan vien Marketing'),
+(30, 2, 'Dao tao chuyen vien thiet ke')
+
+Insert into dbo.PHANCONG(MA_NVIEN, MADA, STT, THOIGIAN) values
+('009', 1, 1, 32),
+('009', 2, 2, 8),
+('004', 3, 1, 40),
+('003', 1, 2, 20.0),
+('003', 2, 1, 20.0),
+('008', 10, 1, 35),
+('008', 30, 2, 5),
+('001', 30, 1, 20),
+('001', 20, 1, 15),
+('006', 20, 1, 30),
+('005', 3, 1, 10),
+('005', 10, 2, 10),
+('005', 20, 1, 10),
+('007', 30, 2, 30),
+('007', 10, 2, 10)
+
+
+BEGIN /** NHANVIEN **/
+	ALTER TABLE NHANVIEN
+	NOCHECK CONSTRAINT ALL
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Đinh', N'Bá', N'Tiến', '009', '02/11/1960', N'121, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Thanh', N'Tùng', '005', '08/20/1962', N'222, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Ngọc', N'Hằng', '007', '03/11/1954', N'332, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Quỳnh', N'Như', '001', '02/01/1967', N'291, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Mạnh', N'Hùng', '004', '03/04/1967', N'95, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Thanh', N'Tâm', '003', '05/04/1957', N'34, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Hồng', N'Quang', '008', '09/01/1967', N'45, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Văn', N'Vinh', '006', '01/01/1965', N'45, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Hoàng', N'Tiến', '010', '03/11/1960', N'725, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Kim', N'Thanh', '011', '09/20/1962', N'726, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Văn', N'Hoàng', '012', '04/11/1954', N'756, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Mạnh', N'Như', '013', '03/01/1967', N'778, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Hoàng', N'Tuấn', '014', '04/04/1967', N'756, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Minh', '015', '06/04/1957', N'789, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Thị', N'Nhung', '016', '10/01/1967', N'775, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Hoàng', '017', '11/01/1965', N'781, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Thị', N'Minh', '018', '02/12/1960', N'625, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Thanh', '019', '08/21/1962', N'626, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Thị', N'Minh', '020', '03/12/1954', N'656, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Hoàng', N'Mạnh', '021', '02/02/1967', N'678, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Minh', N'Văn', '022', '03/05/1967', N'656, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Hoàng', N'Thịnh', '023', '05/05/1957', N'689, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Hoàng', '024', '09/02/1967', N'675, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Nguyễn', N'Thị', N'Minh', '025', '01/02/1965', N'651, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Tiến', N'Lên', '026', '02/13/1960', N'525, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Hoàng', N'Thị', N'Thanh', '027', '08/22/1962', N'526, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Văn', N'Trần', N'Hoàng', '028', '03/13/1954', N'556, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Minh', N'Mạnh', N'Nhung', '029', '02/03/1967', N'578, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Hoàng', N'Lê', '030', '03/05/1967', N'556, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Tùng', '031', '05/06/1957', N'589, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Thị', N'Hoàng', '032', '09/03/1967', N'575, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Tú', '033', '01/03/1965', N'571, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Hoàng', N'Bùi', '034', '02/14/1960', N'4125, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Kim', N'Bùi', '035', '08/23/1962', N'426, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Văn', N'Bùi', '036', '03/14/1954', N'456, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Mạnh', N'Bùi', '037', '02/04/1967', N'478, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Hoàng', N'Bùi', '038', '03/07/1967', N'456, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Bùi', '039', '05/07/1957', N'489, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Thị', N'Bùi', '040', '09/04/1967', N'475, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Bùi', '041', '01/04/1965', N'441, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Hoàng', N'Trần', '042', '02/15/1960', N'325, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Kim', N'Trần', '043', '08/25/1962', N'326, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Văn', N'Trần', '044', '03/16/1954', N'356, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Mạnh', N'Trần', '045', '02/06/1967', N'378, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Hoàng', N'Trần', '046', '03/09/1967', N'356, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Trần', '047', '05/09/1957', N'389, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Thị', N'Trần', '048', '09/06/1967', N'375, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Trần', '049', '01/06/1965', N'312, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Văn', N'Văn', '050', '02/17/1960', N'225, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Kim', N'Văn', '051', '08/26/1962', N'226, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Văn', N'Văn', '052', '03/17/1954', N'256, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Mạnh', N'Văn', '053', '02/07/1967', N'278, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Hoàng', N'Văn', '054', '03/10/1967', N'256, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Văn', '055', '05/10/1957', N'289, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Thị', N'Văn', '056', '09/07/1967', N'275, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Văn', '057', '01/07/1965', N'211, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Văn', N'Tấn', '058', '02/18/1960', N'125, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Kim', N'Tấn', '059', '08/27/1962', N'126, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Văn', N'Tấn', '060', '03/18/1954', N'156, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Mạnh', N'Tấn', '061', '02/08/1967', N'178, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Hoàng', N'Tấn', '062', '03/11/1967', N'156, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Tấn', '063', '05/11/1957', N'189, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Tấn', '064', '09/08/1967', N'175, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Tấn', '065', '01/08/1965', N'10, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Võ', N'Hoàng', N'Thư', '066', '02/19/1961', N'127, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Kim', N'Thư', '067', '08/29/1963', N'28, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Bùi', N'Văn', N'Thư', '068', '03/30/1955', N'58, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Lê', N'Mạnh', N'Thư', '069', '02/10/1968', N'78, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Thư', '070', '03/13/1968', N'58, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Thư', '071', '05/13/1958', N'91, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Trần', N'Văn', N'Thư', '072', '09/10/1968', N'77, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Phạm', N'Thị', N'Thư', '073', '01/10/1966', N'03, Trưng Vương', N'Nữ', 55000, 1)
+
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Tuyền', '074', '03/19/1961', N'856, Cống Quỳnh, TP.HCM', N'Nam', 30000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Kim', N'Miền', '075', '09/29/1963', N'885, Nguyễn Văn Cừ, TP.HCM', N'Nam', 40000, '006', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Tuyền', '076', '04/30/1955', N'875, Nguyễn Thái Học, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Mạnh', N'Miền', '077', '03/10/1968', N'865, Hồ Văn Huê, TP.HCM', N'Nữ', 43000, '006', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Tuyền', '078', '04/13/1968', N'805, Bà Rịa - Vũng Tàu', N'Nam', 38000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Miền', '079', '06/13/1958', N'892, Mai Thị Lự, TP.HCM', N'Nam', 25000, '005', 5)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, MA_NQL, PHG)
+	VALUES (N'Nguyễn', N'Văn', N'Tuyền', '080', '10/10/1968', N'846, Lê Hồng Phong, TP.HCM', N'Nam', 25000, '001', 4)
+	INSERT INTO NHANVIEN (HONV, TENLOT, TENNV, MANV, NGSINH, DCHI, PHAI, LUONG, PHG)
+	VALUES (N'Nguyễn', N'Thị', N'Miền', '002', '11/10/1966', N'803, Trưng Vương', N'Nữ', 55000, 1)
+	ALTER TABLE NHANVIEN
+	CHECK CONSTRAINT ALL
+END
+
+
+INSERT INTO PHONGBAN
+(
+ [MAPHG], [TRPHG], [NG_NHANCHUC], [TENPHG]
+)
+VALUES
+(
+ 6, '020', '2005/12/23', N'Kế'
+),
+(
+ 7, '030', '2006/12/05', N'Nhân sự'
+)
+
+GO
+
+
+INSERT INTO DEAN
+(
+ [TENDA], [MADA], [DDIEM_DA], [PHONG]
+)
+VALUES
+(
+ N'Dự Án 8', 8, N'TP HCM', 1
+),
+(
+ N'Dự Án 9', 9,N'TP HCM', 1
+),
+(
+ N'Dự Án 11', 11,N'TP HCM', 1
+),
+(
+ N'Dự Án 12', 12,N'TP HCM', 1
+),
+(
+ N'Dự Án 13', 13,N'TP HCM', 1
+),
+(
+ N'Dự Án 14', 14,N'TP HCM', 1
+),
+(
+ N'Dự Án 15', 15,N'TP HCM', 5
+)
+
+GO
+
+
+INSERT INTO PHANCONG
+(
+ [MA_NVIEN], [MADA], [THOIGIAN]
+)
+VALUES
+(
+ '010', 8, 32
+),
+(
+ '011', 9, 8
+)
+
+GO
+
+INSERT INTO PHANCONG ([MA_NVIEN], [MADA], [THOIGIAN])
+VALUES
+('010', 8, 32),
+('011', 9, 8),
+('012', 11, 0),
+('013', 12, 0),
+('014', 13, 0),
+('015', 14, 0),
+('016', 15, 0),
+('017', 8, 0),
+('018', 9, 0),
+('019', 11, 0),
+('020', 12, 0),
+('021', 13, 0),
+('022', 14, 0),
+('023', 15, 0),
+('024', 8, 0),
+('025', 9, 0),
+('026', 11, 0),
+('027', 12, 0),
+('028', 13, 0),
+('029', 14, 0),
+('030', 15, 0),
+('031', 8, 0),
+('032', 9, 0),
+('033', 11, 0),
+('034', 12, 0),
+('035', 13, 0),
+('036', 14, 0),
+('037', 15, 0),
+('038', 8, 0),
+('039', 9, 0),
+('040', 11, 0),
+('041', 12, 0),
+('042', 13, 0),
+('043', 14, 0),
+('044', 15, 0),
+('045', 8, 0),
+('046', 9, 0),
+('047', 11, 0),
+('048', 12, 0),
+('049', 13, 0),
+('050', 14, 0)
+
+INSERT INTO NHANVIEN([MANV], [HONV], [TENLOT], [TENNV])
+SELECT [customerID] AS MANV
+		,[firstname] AS HONV
+		, [middlename] AS TENLOT
+		, [lastname] AS TENNV 
+FROM AdventureWorksLT2016.SalesLT.Customer
+WHERE [customerID] BETWEEN 102 AND 200;
+
+
+INSERT INTO PHANCONG VALUES ('006', 30, 2, 10) 

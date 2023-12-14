@@ -1,0 +1,57 @@
+Cho cơ sở dữ liệu như sau: để quản lý việc đặt hàng của khách hàng: 
+1. KHACH (MAKH, TENCTY, DCHICTY, NGUOIDAIDIEN, SDT) 
+Mỗi khách hàng có một mã phân biệt, một tên công ty, địa chi công ty, họ tên người 
+đại diện và số điện thoại. 
+2. NHANVIEN (MANV, HO, TEN, NGAYSINH, NGAYVAOLAM, DCHI) 
+Mỗi nhân viên có một mã phân biệt, một họ tên, ngày sinh, ngày vào làm, địa chỉ. 
+3. HANGHOA (MAHG, TENHG, DGIA) 
+Mỗi hàng hóa có một mã phân biệt, một tên hàng, và một đơn giá. 
+4. DONHANG(MADDH, MAKH, MANV, NGAYDAT, NGAYPHAIGIAO, 
+DCHIGIAO, TPHOGIAO, TRIGIA) 
+ 
+Mỗi đơn đặt hàng có một mã đơn đặt hàng phân biệt, do một khảch hàng đặt với 
+một nhân viên vào một ngày nào đó, với ngày giao, địa chi giao được định trước. 
+Mỗi đơn hàng có một trị giá. 
+5. CT_DDH (MADDH, MAHG, SL, DONGIA) 
+Mỗi đơn đặt hàng có thể đặt một hoặc nhiều mặt hàng với một số lượng và đơn giá 
+nhẩt định. 
+Import dữ liêu vào một người dùng với các quyền thích hợp và thực hiên các yêu 
+cầu sau: 
+CÂU 1. (1,5  điểm) 
+Tạo hàm F_TiLeCK nhận vào số lương hàng đặt và trả về tỉ lệ chiết khấu theo qui 
+tắc: 
+Nếu số lượng hàng đặt ≥ 50 thì tỉ lệ chiết khấu là 0.05 
+Ngược lại, nếu số lượng hàng đặt ≥ 30 thì ti lệ chiết khấu là 0.03 
+Ngược lại, thì tỉ lệ chiết khấu là 0 
+
+CÂU 2. (1,5 điểm) 
+Thêm vào bảng CT_DDH một cột mới có tên là TiLeCK có kiều Number(3,2), có 
+giá trị mặc định là 0 , ràng buộc giá trị từ 0 đến 1 . Sử dụng hàm TiLeCK vừa tạo 
+để cập nhật giá trị cho cột này. 
+
+CÂU 3. (1,5 điểm) 
+Viết hàm F_TrigiaDH nhận vào mã đơn hàng và trả về trị giá của đơn hàng tương 
+ứng, biết rằng trị giá của đơn hàng = SUM (SL*DonGia*(1-TiLeCK)) của các 
+cột thuộc đơn hàng có mã đã cho. Sử dụng hàm này để cập nhật giá trị của cột TriGia 
+trong bảng DONHANG. 
+
+CÂU 4. (1,5 điểm) 
+Viết trigger để tự động cập nhật giá trị cột TriGia của bảng DONHANG mỗi khi có 
+thay đổi dữ liệu liên quan đến các bảng CT_DDH, HANGHOA 
+
+CÂU 5. (1,5 điểm) 
+Tạo view để truy vấn thông tin về doanh số bán hàng theo từng tháng của năm (bao 
+gồm các cột: Tháng, Năm, Tổng doanh số). 
+
+CÂU 6. (1,5 điểm) 
+Viết stored procedure để thống kê top 5 khách hàng mua nhiều hàng nhất trong năm 
+(bao gồm các cột: Mã KH, Tên Công Ty, Tổng số lượng đặt). 
+ 
+CÂU 7. (0,5 điểm) 
+Tạo chỉ mục (index) cho cột MADDH của bảng DONHANG để tối ưu hiệu năng 
+truy vấn. 
+ 
+CÂU 8. (0,5 điểm) 
+Viết câu lệnh SQL để cập nhật giá trị mặc định của cột TiLeCK trong bảng 
+CT_DDH thành 0.01. Sau đó, viết câu lệnh để hiển thị cấu trúc bảng CT_DDH đã 
+cập nhật.. 

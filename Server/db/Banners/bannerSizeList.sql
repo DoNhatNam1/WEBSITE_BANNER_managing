@@ -1,0 +1,5 @@
+SELECT DISTINCT [BannerSize].[BannerSize_id]
+        ,[BannerSize].[BannerSizeName]
+        ,[BannerSize].[Hight]
+        ,[BannerSize].[Lengths]
+FROM [dbo].[BannerSize]

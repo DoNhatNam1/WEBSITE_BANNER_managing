@@ -1,14 +1,12 @@
 import * as React from "react";
 import {useParams, useNavigate } from 'react-router-dom'
 import UseAccountsAndInfos from '../../../apis/ManagerDashboardAPI'
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/DeleteOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Close";
 import InfoIcon from "@mui/icons-material/Info";
+import {Box} from "@mui/material";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import bcrypt from 'bcryptjs';
@@ -198,6 +196,7 @@ export default function UserListTableUI() {
       }).catch((err) => {
         console.log(err);
       });
+      console.log(newRow)
       const updatedRow = { ...newRow, isNew: false };
       setRows(rows.map((row) => (row.UserAccount_id === newRow.UserAccount_id ? updatedRow : row)));
       return updatedRow;

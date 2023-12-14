@@ -16,8 +16,7 @@ import { AiOutlineSwapRight } from 'react-icons/ai'
 const Login = () => {
   const [loginUserName, setLoginUserName] = useState('')
   const [loginPassword, setLoginPassword] = useState('')
-  const [hasFetchedUserAccount, setHasFetchedUserAccount] = useState(false);
-  const [hasFetchedAdminAccount, setHasFetchedAdminAccount] = useState(false);
+  const [hasFetchedAccount, setHasFetchedAccount] = useState(false);
   const { 
     userAccounts, 
     adminAccounts, 
@@ -35,35 +34,22 @@ const Login = () => {
   const navigateTo = useNavigate()
   const [loginStatus, setLoginStatus] = useState('Off')
 
-  const fetchDataUserAccount = async () => {
+  const fetchDataAccount = async () => {
     try {
       const responseauseraccount = await userAccountLoginUrl.get("/")
       console.log(responseauseraccount.data.dataaccount);
       setUserAccounts(responseauseraccount.data.dataaccount.accounts);
-      setHasFetchedUserAccount(true);
+      setAdminAccounts(responseauseraccount.data.dataaccount.accounts);
+      setHasFetchedAccount(true);
     } catch (err) {
       console.log(err);
     }
   };
 
-  if (!hasFetchedUserAccount) {
-    fetchDataUserAccount();
+  if (!hasFetchedAccount) {
+    fetchDataAccount();
   }
   
-  const fetchDataAdminAccount = async () => {
-    try {
-      const responseauseraccount = await userAccountLoginUrl.get("/")
-      console.log(responseauseraccount.data.dataaccount);
-      setAdminAccounts(responseauseraccount.data.dataaccount.accounts);
-      setHasFetchedAdminAccount(true);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  if (!hasFetchedAdminAccount) {
-    fetchDataAdminAccount();
-  }
 
   useEffect(() => {
     if (isLoggedInUser && userData !== null) {

@@ -1,1 +1,118 @@
-/*# sourceMappingURL=managerbannerlist.css.map */
+:root {
+  --PrimaryColorManagerDashboard: hsl(218, 61%, 12%);
+  --SecondaryColorManagerDashboard: hsl(217, 61%, 21%);
+  --HoverCoverManagerDashboard: hsl(40, 27%, 42%);
+  --MainBtnManagerDashboard: hsl(42, 62%, 12%);
+  --blackColorManagerDashboard: hsl(0, 0%, 18%);
+  --textColorManagerDashboard: hsl(0, 0%, 83%);
+  --bgColorManagerDashboard: hsl(218, 24%, 61%);
+  --greyTextManagerDashboard: hsl(34, 4%, 39%);
+  --inputColorManagerDashboard: hsl(240, 12%, 97%);
+  --inputColorManagerDashboardRed: #d5d5d5;
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.ClosePopBtnDiv {
+  flex-basis: 12%;
+  height: 20%;
+  justify-content: end;
+  align-items: start;
+}
+.ClosePopBtnDiv .popupCloseUserInfo {
+  background: none;
+  border: none;
+}
+.ClosePopBtnDiv .popupCloseUserInfo .icon:hover {
+  color: rgb(250, 49, 49);
+}
+
+.edit-form {
+  flex-basis: 60%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.edit-form .LabelContainerMgBannerEdit {
+  gap: 0.5rem;
+}
+.edit-form .LabelContainerMgBannerEdit .labelNameMgBannerEdit {
+  width: 100px;
+}
+.edit-form .LabelContainerMgBannerEdit .labelNameMgBannerEdit p {
+  width: auto;
+}
+.edit-form .LabelContainerMgBannerEdit .inputMgBannerEdit {
+  border: 1px solid var(--greyTextDashboard);
+  background: var(--inputColorDashboard);
+  padding: 0.4rem;
+  border-radius: 5px;
+  width: 400px;
+}
+.edit-form .LabelContainerMgBannerEdit .textareaMgBannerEdit {
+  resize: none;
+  border: 1px solid var(--greyTextDashboard);
+  background: var(--inputColorDashboard);
+  padding: 0.4rem;
+  border-radius: 5px;
+  width: 400px;
+}
+.edit-form .LabelContainerMgBannerEdit-img {
+  gap: 0.5rem;
+}
+.edit-form .LabelContainerMgBannerEdit-img .labelNameMgBannerEdit {
+  width: 100px;
+}
+.edit-form .LabelContainerMgBannerEdit-img .labelNameMgBannerEdit p {
+  width: auto;
+}
+.edit-form .LabelContainerMgBannerEdit-img .inputMgBannerEdit-img {
+  border: hidden;
+  background: none;
+  padding: 0.4rem;
+  width: 400px;
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove {
+  justify-content: space-between;
+  gap: 20.1rem;
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove .image-container {
+  width: 50px;
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove .image-container .profile-img {
+  width: 100%;
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove .btn-image-container .btn-image {
+  border: none;
+  background: none;
+  outline: none;
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove .btn-image-container .btn-image .icon-dashboard {
+  font-size: var(--bigFontSize);
+  color: var(--blackColorDashboard);
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove .btn-image-container:hover .btn-image {
+  background: rgb(241, 103, 103);
+}
+.edit-form .LabelContainerMgBannerEdit-img .img-and-button-remove .btn-image-container:hover .btn-image .icon-dashboard {
+  color: var(--whiteColorDashboard);
+}
+.edit-form .button-update {
+  width: 60%;
+  justify-content: center;
+}
+.edit-form .button-update .btn {
+  padding: 0.8rem 10.5rem;
+  border-radius: 5px;
+}
+.edit-form .button-update .btn .button-container-profile-edit {
+  gap: 1rem;
+}
+.edit-form .button-update .btn:hover .button-container-profile-edit {
+  scale: 1.2;
+}/*# sourceMappingURL=managerbannerlist.css.map */
