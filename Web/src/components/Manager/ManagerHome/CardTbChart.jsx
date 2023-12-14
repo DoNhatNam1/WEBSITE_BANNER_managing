@@ -29,32 +29,6 @@ const CardTbChart = () => {
   const [loiNhuan, setLoiNhuan] = useState([]);
   const [views, setViews] = useState([]);
 
-  // const Thu2 =
-  // const Thu3 =
-  // const Thu4 =
-  // const Thu5 =
-  // const Thu6 =
-  // const Thu7 =
-  // const CN =
-
-  // const thang1 =
-  // const thang2 =
-  // const thang3 =
-  // const thang4 =
-  // const thang5 =
-  // const thang6 =
-  // const thang7 =
-  // const thang8 =
-  // const thang9 =
-  // const thang10 =
-  // const thang11 =
-  // const thang12 =
-
-  // const nam2019 =
-  // const nam2020 =
-  // const nam2021 =
-  // const nam2022 =
-  // const nam2023 =
 
   useEffect(() => {
     updateData(time);

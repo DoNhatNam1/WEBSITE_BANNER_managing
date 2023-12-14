@@ -80,6 +80,8 @@ BEGIN
     ORDER BY SUM(SL) DESC;
 END;
 
+EXEC Top5KhachHangMuaNhieuHang
+
 -- Câu 7:
 -- Tạo chỉ mục (index) cho cột MADDH của bảng DONHANG để tối ưu hiệu năng truy vấn:
 
@@ -103,3 +105,4 @@ SELECT name, definition
 FROM sys.default_constraints
 WHERE parent_object_id = OBJECT_ID('CT_DDH') 
 AND parent_column_id = (SELECT column_id FROM sys.columns WHERE Name = 'TiLeCK' AND object_id = OBJECT_ID('CT_DDH'));
+
